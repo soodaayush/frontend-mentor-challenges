@@ -1,0 +1,134 @@
+/*
+ #333 - dark gray
+ #fff - white
+ #000 - black
+ #ccc - lightgrey
+ #ff0 - yellow
+ #ff0000 - red
+ #00ff00 - green
+ #0000ff - blue
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: "Kumbh Sans", sans-serif;
+  background-image: url("/images/bg-pattern-top.svg");
+  background-color: hsl(185, 75%, 39%);
+}
+
+div {
+  background: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+label {
+  padding: 10px;
+  font-weight: bold;
+}
+
+span {
+  font-weight: 100;
+  opacity: 0.5;
+}
+
+.container {  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px auto;
+  width: 350px;
+  border-radius: 15px 15px 15px 15px;
+
+  .background-image {
+    border-radius: 15px 15px 0 0;
+    img {
+      width: 100%;
+      border-radius: 15px 15px 0 0;
+    }
+  }
+
+  .who {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    img {
+      border-radius: 50%;
+      position: absolute;
+      border: 5px solid white;
+      top: -60px;
+    }
+  }
+
+  .human {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+
+    label {
+      padding: 0 20px;
+    }
+  }
+
+  #age {
+    display: inline;
+    padding-left: 5px;
+  }
+
+  .info {
+    border-radius: 0 0 15px 15px;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    padding: 20px 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    .profile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      label {
+        padding: 0 20px;
+      }
+    }
+
+    #social {
+      font-size: 20px;
+    }
+
+    #stats {
+      letter-spacing: 2px;
+      font-size: 10px;
+    }
+  }
+}
