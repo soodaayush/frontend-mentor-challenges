@@ -1,0 +1,143 @@
+/*
+ #333 - dark gray
+ #fff - white
+ #000 - black
+ #ccc - lightgrey
+ #ff0 - yellow
+ #ff0000 - red
+ #00ff00 - green
+ #0000ff - blue
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  border: 5px solid red;
+  margin: 100px auto;
+  height: 80vh;
+
+  .inner-container {
+    width: 80%;
+    margin: 100px auto;
+
+    .top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .intro {
+        border: 5px solid red;
+        width: 60%;
+
+        p {
+          opacity: 0.6;
+        }
+
+        h1 {
+          color: hsl(300, 43%, 22%);
+          font-size: 55px;
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      .ratings {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 60%;
+        gap: 20px;
+
+        .rating {
+          background-color: hsl(300, 24%, 96%);
+          display: flex;
+          border-radius: 15px;
+          align-items: center;
+          padding-left: 20px;
+          border: 1px solid red;
+
+          img {
+            padding: 4px;
+          }
+
+          label {
+            padding-left: 20px;
+            color: hsl(300, 43%, 22%);
+          }
+        }
+      }
+    }
+
+    .reviews {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 65%;
+      gap: 20px;
+      border: 5px solid red;
+      margin-top: 40px;
+
+      .review { 
+        display: flex;
+        border: 5px solid blue;
+        flex-direction: column;
+        border-radius: 10px;
+        background-color: hsl(300, 43%, 22%);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: white;
+
+        img {
+          margin-top: 20px;
+          height: 60px;
+          margin-left: 20px;
+          width: 60px;
+          border-radius: 50%;
+        }
+
+        label {
+          display: block;
+          padding: 0;
+          opacity: 0.7;
+          margin: 0;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .who {
+          display: inline-block;
+          padding-bottom: 20px;
+
+          h4 {
+            display: inline-block;
+            padding-left: 20px;
+            margin: 10px 0 0;
+          }
+        }
+      }
+    }
+  }
+}

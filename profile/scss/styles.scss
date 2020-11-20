@@ -30,7 +30,7 @@ html {
 body {
   margin: 0;
   font-family: "Kumbh Sans", sans-serif;
-  background-image: url("/images/bg-pattern-top.svg");
+  background-image: url("/profile/images/bg-pattern-top.svg");
   background-color: hsl(185, 75%, 39%);
 }
 
@@ -52,7 +52,8 @@ span {
   opacity: 0.5;
 }
 
-.container {  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+.container {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   display: flex;
   align-items: center;
@@ -122,11 +123,11 @@ span {
       }
     }
 
-    #social {
+    .social {
       font-size: 20px;
     }
 
-    #stats {
+    .stats {
       letter-spacing: 2px;
       font-size: 10px;
     }
