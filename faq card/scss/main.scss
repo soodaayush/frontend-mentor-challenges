@@ -43,7 +43,6 @@ a {
   .inner-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    // width: 55%;
     border-radius: 20px;
     margin: 80px auto;
     background: white;
@@ -66,7 +65,7 @@ a {
         img {
           position: absolute;
           top: 180px;
-          left: -102px;
+          left: -100px;
         }
       }
 
@@ -76,8 +75,8 @@ a {
           border-radius: 50px;
           width: 900px;
           position: absolute;
-          top: -200px;
-          left: -470px;
+          top: -300px;
+          left: -430px;
         }
       }
 
