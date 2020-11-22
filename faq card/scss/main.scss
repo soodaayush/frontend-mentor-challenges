@@ -37,7 +37,7 @@ a {
 }
 
 .outer-container {
-  width: 60%;
+  width: 50%;
   margin: 50px auto;
 
   .inner-container {
@@ -56,7 +56,7 @@ a {
           position: absolute;
           bottom: 10px;
           top: 50px;
-          left: -50px;
+          left: -10px;
         }
       }
 
@@ -65,7 +65,7 @@ a {
 
         img {
           position: absolute;
-          top: 280px;
+          top: 180px;
           left: -102px;
         }
       }
