@@ -86,19 +86,20 @@ a {
   .discover {
     position: relative;
     .text {
-      margin-top: 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      margin: auto;
       align-items: center;
 
       h1 {
-        font-size: 45px;
+        font-size: 65px;
         line-height: 1;
         padding-left: 20px;
       }
 
       p {
+        font-size: 15px;
         width: 90%;
         opacity: 0.5;
       }
@@ -140,7 +141,7 @@ a {
       justify-content: center;
       align-items: center;
       height: 8vh;
-      width: 127px;
+      width: 210px;
       background-color: black;
 
       img {
@@ -172,7 +173,7 @@ a {
 
       .inner-container {
         margin-top: 50px;
-        width: 90%;
+        width: 80%;
       }
 
       h1 {
@@ -196,5 +197,23 @@ a {
     background-image: url(../images/image-about-light.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+  }
+}
+
+@media (max-width: 900px) {
+  .arrow {
+    width: 140px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    background-color: black;
+  }
+
+  .chair {
+    background-position: center;
   }
 }
