@@ -1,0 +1,131 @@
+/*
+ #333 - dark gray
+ #fff - white
+ #000 - black
+ #ccc - lightgrey
+ #ff0 - yellow
+ #ff0000 - red
+ #00ff00 - green
+ #0000ff - blue
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(210, 46%, 95%);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+  display: grid;
+  margin-top: 20px;
+  border-radius: 15px;
+  grid-template-columns: 1fr 2fr;
+
+  .picture {
+    background-image: url(../images/drawers.jpg);
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+    border-radius: 15px 0 0 15px;
+  }
+
+  .about {
+    border-radius: 0 15px 15px 0;
+    background-color: white;
+
+    .content {
+      padding: 20px;
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        font-size: 25px;
+        color: hsl(217, 19%, 35%);
+        line-height: 1.4;
+        padding: 0;
+      }
+
+      p {
+        margin-top: 0;
+        color: hsl(214, 17%, 51%);
+        font-size: 15px;
+      }
+
+      .info {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        img {
+          border-radius: 50%;
+          height: 50px;
+        }
+
+        .author-name {
+          display: flex;
+          flex-direction: column;
+
+          h4 {
+            margin-left: 10px;
+            margin-bottom: 1px;
+            margin-top: 10px;
+            color: hsl(217, 19%, 35%);
+            font-size: 14px;
+            padding: 0;
+          }
+
+          time {
+            padding: 0 10px;
+            color: hsl(214, 17%, 51%);
+            opacity: 0.8;
+            font-size: 14px;
+          }
+        }
+
+        .share {
+          margin-left: auto;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+
+          img {
+            padding: 15px;
+            background-color: hsl(210, 46%, 95%);
+          }
+        }
+      }
+    }
+  }
+}
