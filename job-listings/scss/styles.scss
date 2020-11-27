@@ -1,0 +1,154 @@
+/*
+ #333 - dark gray
+ #fff - white
+ #000 - black
+ #ccc - lightgrey
+ #ff0 - yellow
+ #ff0000 - red
+ #00ff00 - green
+ #0000ff - blue
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(180, 52%, 96%);
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-image: url(../images/bg-header-desktop.svg);
+  height: 20vh;
+  background-color: hsl(180, 29%, 50%);
+}
+
+.green-border {
+  border-left: 5px solid hsl(180, 29%, 50%);
+}
+
+.container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 20px auto;
+
+  .box {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    img {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .about {
+      display: flex;
+      flex: 1;
+      justify-content: flex-start;
+      flex-direction: column;
+
+      .company {
+        margin-bottom: 0;
+
+        label {
+          font-size: 13px;
+          color: hsl(180, 29%, 50%);
+          font-weight: bold;
+        }
+
+        .bg-black {
+          border-radius: 25px;
+          background-color: hsl(180, 14%, 20%);
+          padding: 8px 8px 5px 8px;
+          font-size: 10px;
+          color: white;
+          text-transform: uppercase;
+        }
+
+        .bg-green {
+          border-radius: 25px;
+          background-color: hsl(180, 29%, 50%);
+          padding: 8px 8px 5px 8px;
+          font-size: 10px;
+          color: white;
+          text-transform: uppercase;
+        }
+
+        span {
+          margin-left: 5px;
+        }
+      }
+
+      .job-name {
+        h1 {
+          margin-top: 5px;
+          font-size: 18px;
+          color: hsl(180, 14%, 20%);
+          margin-bottom: 0;
+        }
+      }
+
+      .info {
+        ul {
+          align-items: center;
+          gap: 30px;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          opacity: 0.5;
+          font-size: 15px;
+
+          li {
+            padding-left: 10px;
+          }
+          li:nth-child(1) {
+            list-style: none;
+          }
+        }
+      }
+    }
+
+    .tags {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-right: 10px;
+
+      .bg-cyan {
+        background-color: #eef6f6;
+        padding: 10px 5px 5px 5px;
+      }
+
+      h1 {
+        margin: 10px;
+        font-size: 15px;
+        color: hsl(180, 29%, 50%);
+      }
+    }
+  }
+}
