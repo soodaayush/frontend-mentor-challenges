@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Cabin", sans-serif;
+  background: #ccc;
+}
+
+p,
+h1 {
+  margin: 0;
+}
+
+.container {
+  // height: 400px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  // margin-top: 150px;
+  gap: 20px;
+  border: 1px solid red;
+
+place-content: center;
+  .card {
+    border: 1px solid blue;
+    // align-self: center;
+    // height: 100%;
+    text-align: center;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: stretch;
+    width: 300px;
+    height: 400px;
+    p {
+      margin-top: 15px;
+    }
+
+    h1 {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background: #000;
+      color: #fff;
+    }
+
+    & > * {
+      flex: 1;
+      border-bottom: 1px solid tomato;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
