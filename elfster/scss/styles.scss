@@ -134,16 +134,20 @@ a {
       }
 
       a {
-        background-color: #0e807f;
-        border-radius: 40px;
-        font-size: 22px;
+        background-color: #278d8c;
+        border-radius: 32px;
         border: 4px solid white;
         padding: 10px 50px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
+
+        h2 {
+          margin: 0;
+          font-size: 25px;
+        }
       }
 
       h1 {
-        margin-bottom: 0;
+        margin: 0;
         text-shadow: 3px 3px 5px #000;
         font-size: 40px;
       }
@@ -202,11 +206,18 @@ a {
     background-color: #bbe0d8;
 
     .why {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
       .reason {
+        padding-top: 15px;
+        width: 90%;
         display: flex;
         justify-content: flex-start;
-        width: 90%;
         align-items: center;
+        padding-bottom: 15px;
       }
 
       h1 {
@@ -243,7 +254,7 @@ a {
 
       p {
         font-size: 20px;
-        width: 45%;
+        width: 34%;
         text-align: center;
       }
 
@@ -324,6 +335,7 @@ a {
 
     label {
       font-size: 23px;
+      margin-bottom: 20px;
     }
 
     .how-1 {
@@ -331,6 +343,7 @@ a {
       justify-content: center;
       align-items: flex-start;
       margin: auto;
+      margin-top: 30px;
       width: 60%;
 
       p {
@@ -350,6 +363,7 @@ a {
       align-items: center;
       margin: auto;
       width: 60%;
+      padding-top: 10px;
 
       p {
         font-size: 18px;
@@ -406,6 +420,13 @@ a {
     padding-bottom: 50px;
     background-color: #8e8e93;
 
+    .row-1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+    }
+
     .row {
       display: flex;
       justify-content: center;
@@ -414,85 +435,14 @@ a {
 
     label {
       padding-bottom: 10px;
+      font-size: 16px;
       padding-left: 10px;
     }
 
     a {
+      font-size: 16px;
       padding-left: 15px;
       padding-bottom: 10px;
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .header {
-    .menu {
-      border-radius: 5px;
-      background-color: transparent;
-      transition: 0.5s ease-in-out;
-      width: 20%;
-    }
-  }
-
-  .images {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    .row {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-  }
-
-  .reason {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-
-    img {
-      height: 60px;
-      margin-left: 25px;
-      padding: 0;
-    }
-
-    h1 {
-      line-height: 1;
-      font-size: 2px;
-      font-weight: 500;
-    }
-  }
-
-  .how-1 {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-  }
-
-  .how {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    margin: auto;
-  }
-
-  .download-app {
-    font-size: 5px;
-
-    .stores {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 20px;
     }
   }
 }
