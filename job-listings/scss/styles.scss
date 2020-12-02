@@ -38,6 +38,8 @@ a {
 
 .header {
   background-image: url(../images/bg-header-desktop.svg);
+  background-repeat: none;
+  background-size: cover;
   height: 20vh;
   background-color: hsl(180, 29%, 50%);
 }
