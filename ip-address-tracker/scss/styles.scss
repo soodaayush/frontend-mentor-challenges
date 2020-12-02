@@ -38,14 +38,14 @@ a {
 .container {
   .header {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     background-image: url(../images/pattern-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 20px;
-    height: 20vh;
+    height: 25vh;
 
     h1 {
       color: white;
@@ -53,10 +53,10 @@ a {
     }
 
     .search {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       button {
         height: 50px;
         width: 50px;
@@ -64,6 +64,7 @@ a {
         border-radius: 0 15px 15px 0;
         padding: 0;
         border: none;
+        cursor: pointer;
       }
 
       input {
@@ -88,15 +89,13 @@ a {
     align-items: flex-start;
     background-color: white;
     margin: auto;
-    left: 320px;
-    bottom: -250px;
+    left: 780px;
+    top: 230px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     flex-direction: row;
-    border-radius: 20px;
+    border-radius: 15px;
     text-transform: uppercase;
-    margin-bottom: 500px;
     padding: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
     position: absolute;
 
     label {
@@ -109,46 +108,37 @@ a {
     .ip-address {
       display: flex;
       justify-content: center;
-      align-items: flex-start;
       flex-direction: column;
       border-right: 1px solid #ccc;
       padding-right: 50px;
       padding-bottom: 20px;
-      
     }
 
     .location {
       display: flex;
       justify-content: center;
       flex-direction: column;
-      align-items: flex-start;
       padding-left: 20px;
       border-right: 1px solid #ccc;
       padding-right: 50px;
-      
-      
     }
 
     .timezone {
       display: flex;
       justify-content: center;
-      align-items: flex-start;
       padding-left: 20px;
       flex-direction: column;
       border-right: 1px solid #ccc;
       padding-right: 50px;
       padding-bottom: 20px;
-      
     }
 
     .isp {
       display: flex;
       justify-content: center;
-      align-items: flex-start;
       padding-left: 20px;
       flex-direction: column;
       padding-bottom: 20px;
-      
     }
 
     h1 {
