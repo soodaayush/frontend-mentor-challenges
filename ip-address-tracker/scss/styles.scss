@@ -35,8 +35,15 @@ a {
   text-decoration: none;
 }
 
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   .header {
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -44,8 +51,7 @@ a {
     background-image: url(../images/pattern-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 20px;
-    height: 25vh;
+    height: 250px;
 
     h1 {
       color: white;
@@ -83,26 +89,28 @@ a {
   }
 
   .results {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     background-color: white;
+    align-items: flex-start;
     margin: auto;
-    left: 780px;
-    top: 230px;
+    bottom: -50px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     flex-direction: row;
     border-radius: 15px;
     text-transform: uppercase;
     padding: 20px;
-    position: absolute;
 
     label {
       opacity: 0.5;
       letter-spacing: 1px;
       font-size: 10px;
       font-weight: bold;
+    }
+
+    h1 {
+      color: black;
     }
 
     .ip-address {
