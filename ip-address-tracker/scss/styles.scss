@@ -36,26 +36,102 @@ a {
 }
 
 .top-block {
-  border: 5px solid red;
-  height: 35vh;
-  position: relative;
+  background-image: url(../images/pattern-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 45vh;
+
+  .search {
+    margin-top: 10px;
+    height: 200px;
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .search-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        width: 500px;
+        border-radius: 15px 0 0 15px;
+        height: 50px;
+        padding-left: 20px;
+        font-size: 18px;
+        margin: 0;
+
+        input::placeholder {
+          opacity: 0.1;
+        }
+      }
+
+      button {
+        height: 50px;
+        width: 50px;
+        background-color: black;
+        border-radius: 0 15px 15px 0;
+        padding: 0;
+        margin: 0;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
 
   .parent {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    height: 100%;
 
     .middle-block {
-      border: 5px solid black;
-      height: 10vh;
-      width: 80%;
+      background-color: white;
+      border-radius: 20px;
+      height: 150px;
+      bottom: -75px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      display: flex;
+      justify-content: center;
       position: absolute;
-      bottom: -40px;
+      width: 80%;
+
+      .info {
+        flex: 1;
+        color: black;
+        border-right: 1px solid grey;
+        padding-left: 20px;
+
+        strong {
+          font-size: 25px;
+          font-weight: 700;
+        }
+
+        .no-border {
+          border: none;
+        }
+
+        label {
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-size: 12px;
+          color: grey;
+          font-weight: 600;
+          opacity: 0.7;
+        }
+      }
     }
   }
 }
 
 .bottom-block {
-  border: 5px solid blue;
   height: 65vh;
 }
