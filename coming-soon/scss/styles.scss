@@ -1,0 +1,134 @@
+/*
+ #333 - dark gray
+ #fff - white
+ #000 - black
+ #ccc - lightgrey
+ #ff0 - yellow
+ #ff0000 - red
+ #00ff00 - green
+ #0000ff - blue
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: auto;
+
+  .ping {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+  }
+
+  .soon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      font-weight: 500;
+      font-size: 45px;
+      margin-bottom: 0;
+    }
+
+    label {
+      font-size: 20px;
+    }
+  }
+
+  .notify-me {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      border-radius: 30px;
+      padding: 30px 30px;
+      border: 1px solid hsl(223, 100%, 88%);
+      outline: none;
+      font-weight: 400;
+      height: 50px;
+      width: 20%;
+      font-size: 18px;
+      color: hsl(223, 100%, 88%);
+    }
+
+    input::placeholder {
+      color: #d8dfe7;
+    }
+
+    button {
+      margin-left: 30px;
+      padding: 0;
+      height: 50px;
+      border: 1px solid red;
+      border-radius: 20px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 18px 24px;
+      color: white;
+      background-color: hsl(223, 87%, 63%);
+      width: 150px;
+      border: none;
+    }
+  }
+
+  .slack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+
+    img {
+      height: 450px;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      background-color: white;
+      border: 1px solid rgb(224, 224, 224);
+      border-radius: 50%;
+      height: 50px;
+      margin: 0 10px;
+      padding: 10px;
+    }
+  }
+
+  .copyright {
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+}
