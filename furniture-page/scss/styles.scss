@@ -85,6 +85,7 @@ a {
 
   .discover {
     position: relative;
+
     .text {
       display: flex;
       flex-direction: column;
@@ -93,7 +94,7 @@ a {
       align-items: center;
 
       h1 {
-        font-size: 65px;
+        font-size: 45px;
         line-height: 1;
         padding-left: 20px;
       }
