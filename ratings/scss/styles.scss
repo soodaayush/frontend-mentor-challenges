@@ -43,6 +43,7 @@ a {
   .top-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    width: 80%;
 
     .showcase {
       width: 500px;
@@ -105,16 +106,13 @@ a {
   }
 
   .bottom-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 20px 0;
+    width: 80%;
 
     .reviews {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      height: 35vh;
       gap: 40px;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
 
       .absolute-1 {
         top: 30px;
@@ -128,7 +126,6 @@ a {
 
       .review {
         border-radius: 10px;
-        width: 450px;
         padding: 20px;
         background-color: hsl(300, 43%, 22%);
         position: relative;
