@@ -27,7 +27,6 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
-  line-height: 1.6;
   font-family: "Barlow Semi Condensed", sans-serif;
 }
 
@@ -43,12 +42,31 @@ label {
   opacity: 0.5;
 }
 
+p {
+  line-height: 1.6;
+  font-size: 13px;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
   gap: 20px;
+
+  .flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+  }
 
   .who {
     display: inline-block;
@@ -100,7 +118,6 @@ label {
   .box-4 {
     padding: 20px;
     border-radius: 10px;
-
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
 
