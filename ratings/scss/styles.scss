@@ -1,15 +1,71 @@
-/*
- #333 - dark gray
- #fff - white
- #000 - black
- #ccc - lightgrey
- #ff0 - yellow
- #ff0000 - red
- #00ff00 - green
- #0000ff - blue
-*/
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sriracha&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+$bg-color-line: #cbcbcb;
+$bg-color-page: #19223e;
+$color-cgi: #991f3d;
+$color-black: #555555;
+$color-brand-primary: #3863d9;
+$bg-footer-1: #bbdeea;
+$bg-footer-2: #eafdfc;
+$color-text: hsl(222deg, 22%, 5%);
+$color-background: hsl(0deg, 0%, 100%);
+$color-blurred-background: hsla(0deg, 0%, 100%, 0.85);
+$color-primary: hsl(245deg, 100%, 60%);
+$color-secondary: hsl(333deg, 100%, 45%);
+$color-tertiary: hsl(255deg, 85%, 30%);
+$color-decorative: hsl(200deg, 75%, 65%);
+$color-muted: hsl(210deg, 55%, 92%);
+$color-muted-background: hsla(210deg, 55%, 92%, 0.85);
+$color-info: hsl(245deg, 100%, 60%);
+$color-success: hsl(160deg, 100%, 40%);
+$color-success-background: hsla(160deg, 100%, 40%, 0.1);
+$color-error: hsl(340deg, 95%, 50%);
+$color-error-background: hsla(340deg, 95%, 43%, 0.1);
+$color-alert: hsl(37deg, 100%, 50%);
+$color-alert-background: hsla(52deg, 100%, 50%, 0.25);
+$color-venn-0: hsl(190deg, 100%, 65%);
+$color-venn-1: hsl(340deg, 100%, 65%);
+$color-gray-100: hsl(225deg, 25%, 95%);
+$color-gray-200: hsl(225deg, 16%, 90%);
+$color-gray-300: hsl(225deg, 8%, 80%);
+$color-gray-400: hsl(225deg, 8%, 70%);
+$color-gray-500: hsl(225deg, 7%, 60%);
+$color-gray-600: hsl(225deg, 15%, 50%);
+$color-gray-700: hsl(225deg, 12%, 40%);
+$color-gray-900: hsl(225deg, 25%, 20%);
+$color-gray-1000: hsl(225deg, 15%, 15%);
+$color-subtle-background: hsl(225deg, 25%, 95%);
+$color-subtle-floating: hsl(0deg, 0%, 100%);
+$color-homepage-light: hsl(204deg, 67%, 85%);
+$color-homepage-dark: hsl(202deg, 71%, 90%);
+$color-homepage-bg: hsl(204deg, 67%, 85%);
+$syntax-bg: hsl(225deg, 25%, 97%);
+$syntax-highlight: hsl(225deg, 25%, 93%);
+$syntax-txt: #2a2a2a;
+$syntax-comment: #467790;
+$syntax-prop: #da0079;
+$syntax-bool: #bf00b8;
+$syntax-val: #78909c;
+$syntax-str: #651fff;
+$syntax-name: #aa00ff;
+$syntax-del: rgb(255, 85, 85);
+$syntax-regex: #3600d6;
+$syntax-fn: #3d5afe;
 
 *,
 *::after,
@@ -22,8 +78,8 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
   line-height: 1.6;
+  font-size: 16px;
   font-family: "Spartan", sans-serif;
 }
 
@@ -35,146 +91,143 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+}
+
 .container {
-  width: 80%;
-  margin: auto;
+  width: 800px;
   height: 100vh;
 
-  .top-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 100%;
-    margin: 80px 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-    .showcase {
-      width: 500px;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: flex-start;
+  .top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-      h1 {
-        font-size: 45px;
-        line-height: 1;
-        color: hsl(300, 43%, 22%);
-        font-weight: 600;
-        margin: 0;
-      }
+    .top-left {
+      flex: 1;
 
-      p {
-        font-size: 15px;
-        color: hsl(303, 10%, 53%);
+      .text {
+        h1 {
+          font-size: 28px;
+          line-height: 1;
+          margin-bottom: 0;
+          color: hsl(300, 43%, 22%);
+        }
+
+        p {
+          font-size: 10px;
+          color: hsl(303, 10%, 53%);
+        }
       }
     }
 
-    .ratings {
+    .top-right {
+
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      align-items: flex-end;
       flex-direction: column;
-      border: 1px solid red;
-      gap: 20px;
+      flex: 1;
 
       .margin-1 {
-        margin-left: 40px;
+        margin-right: 80px;
       }
 
       .margin-2 {
-        margin-left: 80px;
+        margin-right: 30px;
       }
 
-      .rating {
+      .ratings {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: nowrap;
-        background-color: hsl(300, 24%, 96%);
-        border-radius: 10px;
-        padding: 20px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 20px;
 
-        label {
-          color: hsl(300, 43%, 22%);
-          font-weight: 700;
-          padding: 0 20px;
-          font-size: 8px;
-        }
+        .rating {
+          padding: 10px 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: nowrap;
+          border-radius: 10px;
+          background-color: #f7f2f8;
 
-        img {
-          padding: 5px;
+          label {
+            padding-left: 10px;
+            color: hsl(300, 43%, 22%);
+            font-size: 10px;
+          }
         }
       }
     }
   }
 
-  .bottom-section {
-    max-width: 100%;
-    border: 1px solid red;
+  .bottom {
+    width: 100%;
+
+    .margin-1 {
+      margin-top: 40px;
+    }
+
+    .margin-2 {
+      margin-top: 80px;
+    }
 
     .reviews {
-      border: 1px solid red;
-      gap: 40px;
       display: flex;
-      flex-direction: row;
-      width: 100%;
+      justify-content: space-between;
+      align-items: center;
 
-      .margin-1 {
-        margin-top: 30px;
-      }
-
-      .margin-2 {
-        margin-top: 60px;
-      }
+      gap: 20px;
 
       .review {
-        border: 1px solid red;
+        padding: 20px 20px;
         border-radius: 10px;
-        padding: 20px;
         background-color: hsl(300, 43%, 22%);
 
         .who {
           display: flex;
           justify-content: flex-start;
-          align-items: center;
-          flex-direction: row;
-          margin: 0 auto;
-          width: 90%;
+          align-items: flex-start;
 
           img {
             border-radius: 50%;
+            margin-top: 5px;
             height: 40px;
-            display: inline-block;
           }
 
           .info {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             padding-left: 20px;
-            padding-top: 10px;
-            flex-direction: column;
 
             h1 {
+              font-size: 12px;
+              margin-bottom: 0;
               color: white;
-              font-size: 14px;
-              margin: 0;
             }
 
             label {
-              color: #9e538a;
-              font-size: 14px;
+              font-size: 12px;
+              color: #914178;
+              margin: 0;
             }
           }
         }
 
         .text {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          color: white;
+          opacity: 0.7;
 
           p {
-            opacity: 0.7;
-            padding: 20px;
-            color: white;
+            font-size: 9px;
           }
         }
       }
