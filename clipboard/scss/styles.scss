@@ -106,9 +106,6 @@ p {
 }
 
 .container {
-  width: Max(800px, 80%);
-  margin: auto;
-
   .intro {
     display: flex;
     justify-content: center;
@@ -241,11 +238,18 @@ p {
       gap: 20px;
 
       .workflow {
-        height: 200px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+
+        h1 {
+          font-size: 18px;
+        }
+
+        .height {
+          height: 23px;
+        }
       }
     }
   }
@@ -296,6 +300,11 @@ p {
     align-items: center;
     background-color: #f5f6f8;
 
+    label {
+      font-size: 12px;
+      opacity: 0.7;
+    }
+
     .content {
       display: flex;
       justify-content: flex-start;
@@ -340,7 +349,7 @@ p {
           justify-content: flex-start;
           align-items: center;
           padding-left: 20px;
-          gap: 50px;
+          gap: 60px;
         }
       }
     }
