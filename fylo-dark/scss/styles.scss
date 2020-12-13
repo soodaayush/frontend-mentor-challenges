@@ -24,6 +24,7 @@ body {
 
 a {
   text-decoration: none;
+  outline: none;
   color: #bbc1ca;
 }
 
@@ -41,7 +42,6 @@ h6 {
 }
 
 .container {
-  border: 5px solid red;
 
   .content {
     display: flex;
@@ -99,21 +99,19 @@ h6 {
         width: 200px;
         border-radius: 20px;
         color: white;
-        background: linear-gradient(hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+        background-color: hsl(198, 60%, 50%);
       }
     }
   }
 
   .access {
-    border: 1px solid red;
-    margin: 120px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: auto;
     gap: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 
     .row {
       display: flex;
@@ -121,6 +119,14 @@ h6 {
       align-items: center;
       color: white;
       gap: 50px;
+
+      .small {
+        height: 80px;
+      }
+
+      .big {
+        height: 70px;
+      }
 
       .info {
         display: flex;
@@ -153,18 +159,37 @@ h6 {
     }
 
     .text {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
       flex: 1;
+      margin-left: 40px;
+
+      h1 {
+        margin-bottom: 0;
+      }
+
+      a {
+        text-decoration: underline;
+        color: hsl(176, 68%, 64%);
+
+        img {
+          display: inline;
+        }
+      }
     }
   }
 
   .reviews {
     padding: 50px 0;
     position: relative;
+    margin-bottom: 80px;
 
     .quotes {
       position: absolute;
       top: 0;
-      left: 130px;
+      left: 80px;
     }
 
     .content {
@@ -222,32 +247,35 @@ h6 {
     position: relative;
 
     .box {
-      padding: 20px;
+      padding: 40px;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       color: white;
       width: 50%;
+      border-radius: 5px;
       margin: auto;
       position: absolute;
-      bottom: -80px;
+      bottom: -120px;
       background-color: hsl(217, 28%, 15%);
 
-      h3 {
+      h2 {
         margin-bottom: 0;
       }
 
       p {
         text-align: center;
+        margin-bottom: 40px;
       }
 
       input {
-        width: 300px;
+        width: 400px;
         border-radius: 20px;
         border: none;
         outline: none;
         padding: 10px;
+        margin-right: 20px;
       }
 
       input::placeholder {
@@ -278,25 +306,36 @@ h6 {
 
     .content {
       margin-top: 100px;
+      gap: 20px;
     }
 
     .col {
       display: flex;
       justify-content: center;
-      border: 1px solid red;
       flex: 1;
       align-items: flex-start;
       flex-direction: column;
       color: white;
 
-      img {
+      .logo {
         margin-bottom: 20px;
+      }
+
+      .margin-1 {
+        margin-top: 20px;
+      }
+
+      .margin-2 {
+        margin-top: 40px;
+      }
+
+      .margin-3 {
+        margin-bottom: 40px;
       }
 
       .info {
         display: flex;
         justify-content: center;
-        border: 1px solid red;
         align-items: flex-start;
       }
 
@@ -310,11 +349,19 @@ h6 {
       justify-content: flex-start;
       align-items: center;
       flex: 1;
-      border: 1px solid red;
       gap: 10px;
 
+      .socials {
+        display: flex;
+        margin-bottom: 20px;
+        gap: 10px;
+      }
+
       img {
-        height: 20px;
+        height: 40px;
+        border: 1px solid white;
+        border-radius: 50%;
+        padding: 10px;
       }
     }
   }
