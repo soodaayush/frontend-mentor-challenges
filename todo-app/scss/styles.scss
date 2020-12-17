@@ -60,10 +60,14 @@ img {
 
     .create {
       margin-top: 20px;
-      padding: 15px 10px;
+      padding: 15px;
       width: 100%;
       color: hsl(233, 14%, 35%);
       background-color: hsl(235, 24%, 19%);
+
+      label {
+        padding-left: 10px;
+      }
     }
   }
 
@@ -85,6 +89,10 @@ img {
       border-bottom: 1px solid #35374b;
       color: hsl(234, 39%, 85%);
       padding: 15px;
+
+      label {
+        padding-left: 10px;
+      }
     }
 
     .options {
@@ -99,13 +107,21 @@ img {
         }
       }
     }
+
+    .footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid red;
+      color: white;
+    }
   }
 }
 
 @media (max-width: 2000px) {
   .content {
     display: flex;
-    width: 50%;
+    width: 35%;
     flex-direction: column;
     border: 1px solid red;
     margin: auto;
