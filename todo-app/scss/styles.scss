@@ -29,11 +29,35 @@ img {
 }
 
 .container {
-  border: 5px solid red;
+  .gradient {
+    background: linear-gradient(#75b3f8, #a974f7);
+    border: none;
+  }
+
+  .margin {
+    margin-left: 5px;
+    margin-top: 6px;
+  }
+
+  .check {
+    display: inline-block;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+  }
+
+  .circle {
+    display: inline-block;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    border: 1px solid #2f3147;
+  }
 
   .image {
     height: 40vh;
-    border: 5px solid blue;
     background-image: url(../images/bg-desktop-dark.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -59,14 +83,19 @@ img {
     }
 
     .create {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
       margin-top: 20px;
       padding: 15px;
       width: 100%;
-      color: hsl(233, 14%, 35%);
+      color: hsl(234, 11%, 52%);
       background-color: hsl(235, 24%, 19%);
+      box-shadow: #12151e 5px 5px 5px;
+      border-radius: 5px;
 
       label {
-        padding-left: 10px;
+        padding-left: 15px;
       }
     }
   }
@@ -75,8 +104,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
-    border: 5px solid purple;
+    height: 70vh;
     background-color: hsl(235, 21%, 11%);
     position: relative;
 
@@ -86,12 +114,20 @@ img {
     }
 
     .list-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
       border-bottom: 1px solid #35374b;
       color: hsl(234, 39%, 85%);
       padding: 15px;
 
+      input {
+        background-color: transparent;
+        outline: none;
+      }
+
       label {
-        padding-left: 10px;
+        padding-left: 15px;
       }
     }
 
@@ -100,6 +136,10 @@ img {
       justify-content: space-between;
       padding: 10px;
       color: hsl(233, 14%, 35%);
+
+      .bg-blue {
+        color: #4573ce;
+      }
 
       .status {
         label {
@@ -111,9 +151,9 @@ img {
     .footer {
       display: flex;
       justify-content: center;
+      margin-top: 300px;
       align-items: center;
-      border: 1px solid red;
-      color: white;
+      color: hsl(233, 14%, 35%);
     }
   }
 }
@@ -123,16 +163,17 @@ img {
     display: flex;
     width: 35%;
     flex-direction: column;
-    border: 1px solid red;
     margin: auto;
   }
 
   .black {
     .content {
-      position: absolute;
-      top: -50px;
       background-color: hsl(235, 24%, 19%);
+      flex-direction: column;
+      position: absolute;
+      top: -40px;
       box-shadow: #12151e 5px 30px 5px;
+      border-radius: 5px;
     }
   }
 }
@@ -146,7 +187,6 @@ img {
     display: flex;
     width: 25%;
     flex-direction: column;
-    border: 1px solid red;
     top: 250px;
     position: absolute;
     margin: auto;
@@ -154,9 +194,12 @@ img {
 
   .black {
     .content {
-      position: absolute;
-      top: -50px;
       background-color: hsl(235, 24%, 19%);
+      flex-direction: column;
+      position: absolute;
+      top: -40px;
+      box-shadow: #12151e 5px 30px 5px;
+      border-radius: 5px;
     }
   }
 }

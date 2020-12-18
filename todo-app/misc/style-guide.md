@@ -36,6 +36,9 @@ The designs were created to the following widths:
 
 ## Typography
 
+#75b3f8
+#a974f7
+
 ### Body Copy
 
 - Font size: 18px
