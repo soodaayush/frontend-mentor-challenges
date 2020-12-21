@@ -18,9 +18,8 @@ html {
 
 body {
   margin: 0;
-  background-image: url(../images/bg-tablet-pattern.svg);
   background-repeat: no-repeat;
-  background-position: top -100px right 140px;
+  background-position: top -100px right 160px;
   background-size: 600px;
 }
 
@@ -131,13 +130,7 @@ h3 {
       }
     }
   }
-
   .different {
-    background-image: url(../images/bg-tablet-pattern.svg);
-    background-repeat: no-repeat;
-    background-position: top 250px left -350px;
-    padding: 50px 0;
-
     .content {
       gap: 30px;
 
@@ -329,8 +322,8 @@ h3 {
   body {
     background-image: url(../images/bg-tablet-pattern.svg);
     background-repeat: no-repeat;
-    background-position: top -100px right;
-    background-size: 500px;
+    background-position: top -200px right -100px;
+    background-size: 600px;
   }
 
   .content {
@@ -339,13 +332,21 @@ h3 {
     margin: auto;
     height: 100%;
   }
+
+  .different {
+    background-image: url(../images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: top 650px left -450px;
+    padding: 50px 0;
+  }
 }
 
 @media (min-width: 2000px) {
   body {
     background-image: url(../images/bg-tablet-pattern.svg);
     background-repeat: no-repeat;
-    background-position: top -100px right;
+    background-position: top -200px right 300px;
+    background-size: 900px;
   }
 
   .content {
@@ -353,6 +354,13 @@ h3 {
     width: Max(600px, 60%);
     margin: auto;
     height: 100%;
+  }
+
+  .different {
+    background-image: url(../images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: top 150px left -650px;
+    padding: 50px 0;
   }
 }
 
