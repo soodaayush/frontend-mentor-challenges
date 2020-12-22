@@ -365,6 +365,24 @@ h3 {
 }
 
 @media (max-width: 600px) {
+  .header {
+    .content {
+      width: 50%;
+
+      .links {
+        a {
+          display: none;
+        }
+      }
+
+      .get-started {
+        button {
+          display: none;
+        }
+      }
+    }
+  }
+
   .intro {
     .content {
       width: 100%;
@@ -377,6 +395,20 @@ h3 {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        h1 {
+          text-align: center;
+        }
+
+        p {
+          text-align: center;
+        }
+
+        .get-started {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
 
       .image {
@@ -417,13 +449,18 @@ h3 {
     }
 
     .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
       h1 {
-        width: 500px;
         text-align: center;
       }
 
       p {
-        width: 500px;
+        width: 400px;
+        text-align: center;
       }
     }
 
