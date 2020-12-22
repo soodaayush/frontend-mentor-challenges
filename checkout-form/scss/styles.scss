@@ -98,6 +98,7 @@ button {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  border: 1px solid red;
   padding: 50px 0;
 
   h1 {
@@ -372,5 +373,7 @@ button {
     grid-template-columns: 1fr 1fr;
     margin-top: 30px;
     gap: 40px;
+    width: 100%;
+    border: 1px solid red;
   }
 }
