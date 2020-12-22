@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="robots" content="index,follow" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="intro">
+        <img src="images/bootstrap-logo.svg" />
+        <h2>Checkout Form</h2>
+        <p>
+          Below is an example form built entirely from Bootstrap's form
+          controls. Each required form group has a <br />
+          validation state that can be triggered by attempting to submit the
+          form without completing it.
+        </p>
+      </div>
+      <div class="content">
+        <div class="checkout-form">
+          <h2>Billing Address</h2>
+          <div class="box col-1-3">
+            <p>First Name</p>
+            <input type="text" />
+          </div>
+          <div class="box col-3-5">
+            <p>Last name</p>
+            <input type="text" />
+          </div>
+          <div class="box col-1-5">
+            <p>Username</p>
+            <input type="text" placeholder="Username" />
+            <div class="at">e</div>
+          </div>
+          <div class="box col-1-5">
+            <p>Email (Optional)</p>
+            <input type="email" placeholder="you@example.com" />
+          </div>
+          <div class="box col-1-5">
+            <p>Address</p>
+            <input type="text" placeholder="1234 main st" />
+          </div>
+          <div class="box col-1-5">
+            <p>Address 2 (Optional)</p>
+            <input type="text" placeholder="Apartment or suite" />
+          </div>
+          <div class="box col-1-3">
+            <p>Country</p>
+            <select>
+              <option>Choose...</option>
+              <option>United States</option>
+            </select>
+          </div>
+          <div class="box">
+            <p>State</p>
+            <select>
+              <option>Choose...</option>
+              <option>California</option>
+            </select>
+          </div>
+          <div class="box">
+            <p>Zip</p>
+            <input type="text" />
+          </div>
+          <div class="br-grey col-1-5"></div>
+          <div class="shipping col-1-5">
+            <input type="checkbox" />
+            <label>Shipping address is the same as my billing address</label
+            ><br />
+            <input type="checkbox" />
+            <label>Save this information for next time</label>
+          </div>
+          <div class="br-grey col-1-5"></div>
+          <div class="payment">
+            <h2>Payment</h2>
+            <div class="thing">
+              <input type="radio" />
+              <label>Credit Card</label>
+            </div>
+            <input type="radio" />
+            <label>Debit Card</label>
+            <input type="radio" />
+            <label>Paypal</label>
+          </div>
+        </div>
+        <div class="your-cart">
+          <div class="title">
+            <h2>Your cart</h2>
+            <div class="number">
+              <span>3</span>
+            </div>
+          </div>
+          <div class="products">
+            <div class="product">
+              <div class="info">
+                <label>Product name</label>
+                <span>$12</span>
+              </div>
+              <p>Brief description</p>
+            </div>
+            <div class="product">
+              <div class="info">
+                <label>Second product</label>
+                <span>$8</span>
+              </div>
+              <p>Brief description</p>
+            </div>
+            <div class="product">
+              <div class="info">
+                <label>Third product</label>
+                <span>$5</span>
+              </div>
+              <p>Brief description</p>
+            </div>
+            <div class="product green">
+              <div class="info">
+                <label>Promo code</label>
+                <span>-$5</span>
+              </div>
+              <p>EXAMPLECODE</p>
+            </div>
+            <div class="product">
+              <div class="info">
+                <label>Total (USD)</label>
+                <span class="bold">$20</span>
+              </div>
+            </div>
+            <div class="promo-code">
+              <div class="code">
+                <input type="text" placeholder="Promo Code" />
+                <button>Redeem</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
