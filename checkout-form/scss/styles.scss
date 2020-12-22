@@ -362,7 +362,7 @@ button {
   .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 30px;
+    margin-top: 30px auto;
     gap: 40px;
   }
 }
@@ -371,7 +371,7 @@ button {
   .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 30px;
+    margin-top: 30px auto;
     gap: 40px;
     width: 100%;
     border: 1px solid red;
