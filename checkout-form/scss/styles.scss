@@ -65,7 +65,7 @@ input {
   border: 1px solid #ced4da;
 
   &:focus {
-    box-shadow: #badafb 0px 0px 5px 3px;
+    box-shadow: #badafb 0px 0px 0px 3px;
   }
 }
 
@@ -75,6 +75,10 @@ select {
   border-radius: 5px;
   padding-left: 20px;
   border: 1px solid #ced4da;
+
+  &:focus {
+    box-shadow: #badafb 0px 0px 4px 1px;
+  }
 }
 
 button {
@@ -93,7 +97,7 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: relative;
+  width: 100%;
   padding: 50px 0;
 
   h1 {
@@ -177,19 +181,16 @@ button {
 
     .at {
       background-color: #e9ecef;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       padding-left: 3px;
-      display: inline;
       position: absolute;
       top: 35px;
       left: 1px;
-      height: 40px;
+      height: 39px;
       padding-left: 10px;
       padding-top: 7px;
       width: 40px;
-      border-radius: 5px 0 5px 0;
+      border-radius: 5px 0 0px 5px;
+      border-right: 1px solid #ced4da;
     }
 
     select {
@@ -199,27 +200,20 @@ button {
       border-radius: 5px;
       outline: none;
       padding-left: 5px;
-
-      &:focus {
-        box-shadow: #badafb 0px 0px 5px 4px;
-      }
     }
 
     .shipping {
       input {
         width: 20px;
         background-color: grey;
-        border: 1px solid red;
 
         &:focus {
-          box-shadow: #badafb 0px 0px 10px 2px;
+          box-shadow: #badafb 0px 0px 5px 2px;
         }
       }
     }
 
     .payment {
-      position: relative;
-
       h2 {
         margin-left: 5px;
       }
@@ -229,14 +223,14 @@ button {
         width: 10px;
 
         &:focus {
-          box-shadow: #badafb 0px 0px 10px 2px;
+          box-shadow: #badafb 0px 0px 2px 2px;
         }
       }
     }
   }
 
   .your-cart {
-    width: 20vw;
+    width: 400px;
 
     .title {
       display: flex;
@@ -246,6 +240,7 @@ button {
 
       h2 {
         margin-bottom: 10px;
+        color: #6c757d;
       }
 
       .number {
@@ -269,14 +264,18 @@ button {
         color: #28a745;
       }
 
-      .bold {
-        font-weight: bold;
-      }
-
       .product {
         background-color: white;
         padding: 20px 10px;
         border: 1px solid #ced4da;
+
+        .thick {
+          font-weight: 300;
+        }
+
+        .bold {
+          font-weight: 600;
+        }
 
         .info {
           display: flex;
@@ -284,7 +283,7 @@ button {
           align-items: center;
 
           label {
-            font-weight: 400;
+            font-weight: 600;
           }
         }
 
@@ -309,10 +308,7 @@ button {
             padding-left: 10px;
             margin: 0;
             width: 80%;
-
-            &:focus {
-              box-shadow: #badafb 0px 0px 5px 3px;
-            }
+            border-radius: 5px 0px 0px 5px;
           }
 
           button {
