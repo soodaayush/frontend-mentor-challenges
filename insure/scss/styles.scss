@@ -19,13 +19,11 @@ html {
 
 body {
   margin: 0;
-  background-image: url(../images/bg-pattern-intro-left-desktop.svg);
-  background-repeat: no-repeat;
-  background-position: bottom -300px left;
 }
 
 a {
   text-decoration: none;
+  outline: none;
 }
 
 img {
@@ -92,10 +90,8 @@ h6 {
 
     .insurance {
       background-color: hsl(256, 26%, 20%);
-      background-image: url(../images/bg-pattern-intro-right-desktop.svg);
-      background-repeat: no-repeat;
-      background-position: top 100px right;
       padding: 50px 0;
+      position: relative;
 
       .content {
         gap: 30px;
@@ -112,6 +108,7 @@ h6 {
             font-weight: 400;
             line-height: 1.1;
             font-size: 65px;
+            margin-bottom: 0;
           }
 
           button {
@@ -132,7 +129,6 @@ h6 {
           }
 
           .white-br {
-            margin-top: 100px;
             border-bottom: 2px solid white;
             width: 150px;
           }
@@ -146,19 +142,38 @@ h6 {
             margin-bottom: -260px;
           }
         }
+
+        .right {
+          img {
+            height: 500px;
+            position: absolute;
+            right: 1px;
+            top: 0;
+          }
+        }
       }
     }
   }
 
   .different {
     padding: 200px 0;
+    position: relative;
+
+    .left {
+      position: absolute;
+      top: -160px;
+    }
+
+    h1 {
+      font-size: 60px;
+    }
 
     .content {
       display: flex;
       flex-direction: column;
 
       .purple-br {
-        border-bottom: 2px solid hsl(256, 26%, 20%);
+        border-bottom: 2px solid #cec1d1;
         margin-top: 50px;
         width: 150px;
       }
@@ -176,17 +191,22 @@ h6 {
 
   .how-we-work {
     padding: 80px 0;
+
     .content {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: hsl(256, 26%, 20%);
       color: white;
-      padding: 0 30px;
+      padding: 30px;
       background-image: url(../images/bg-pattern-how-we-work-desktop.svg);
       background-repeat: no-repeat;
-      background-size: 300px;
+      background-size: 350px;
       background-position: right;
+
+      h1 {
+        font-size: 40px;
+      }
 
       button {
         text-transform: uppercase;
@@ -231,6 +251,12 @@ h6 {
         }
       }
 
+      .br-grey {
+        border: 1px solid #ececec;
+        margin: 20px 10px;
+        width: 98%;
+      }
+
       .row-2 {
         display: flex;
         padding: 10px;
@@ -246,7 +272,8 @@ h6 {
           }
 
           a {
-            color: #909092;
+            color: #7e7c87;
+            font-weight: 600;
           }
         }
       }
