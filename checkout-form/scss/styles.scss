@@ -15,6 +15,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
 
+$blue-box-shadow: #badafb;
+$blue-box-border: #ced4da;
+
 *,
 *::after,
 *::before {
@@ -54,18 +57,19 @@ p {
   margin: 0;
 }
 
-input {
+input[type="text"],
+input[type="email"] {
   margin-top: 10px;
   font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
   width: 100%;
   padding: 10px 0;
-  border-radius: 5px;
   padding-left: 10px;
   outline: none;
-  border: 1px solid #ced4da;
+  border-radius: 5px;
+  border: 1px solid $blue-box-border;
 
   &:focus {
-    box-shadow: #badafb 0px 0px 0px 3px;
+    box-shadow: $blue-box-shadow 0px 0px 0px 3px;
   }
 }
 
@@ -97,8 +101,6 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
-  border: 1px solid red;
   padding: 50px 0;
 
   h1 {
@@ -124,6 +126,14 @@ button {
       font-weight: 100;
       font-size: 18px;
     }
+  }
+
+  .content {
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
   }
 
   .checkout-form {
@@ -184,10 +194,10 @@ button {
       background-color: #e9ecef;
       padding-left: 3px;
       position: absolute;
-      top: 35px;
+      top: 36px;
       left: 1px;
       height: 39px;
-      padding-left: 10px;
+      padding-left: 11px;
       padding-top: 7px;
       width: 40px;
       border-radius: 5px 0 0px 5px;
@@ -204,12 +214,13 @@ button {
     }
 
     .shipping {
-      input {
-        width: 20px;
-        background-color: grey;
+      input[type="checkbox"] {
+        width: auto;
+        outline: none;
+        border: 1px solid $blue-box-border;
 
         &:focus {
-          box-shadow: #badafb 0px 0px 5px 2px;
+          box-shadow: $blue-box-shadow 0px 0px 0px 5px;
         }
       }
     }
@@ -219,12 +230,13 @@ button {
         margin-left: 5px;
       }
 
-      input {
-        display: inline;
-        width: 10px;
+      input[type="radio"] {
+        width: auto;
+        outline: none;
+        border-radius: 20px;
 
         &:focus {
-          box-shadow: #badafb 0px 0px 2px 2px;
+          box-shadow: #badafb 0px 0px 0px 5px;
         }
       }
     }
@@ -267,7 +279,7 @@ button {
 
       .product {
         background-color: white;
-        padding: 20px 10px;
+        padding: 10px;
         border: 1px solid #ced4da;
 
         .thick {
@@ -333,7 +345,7 @@ button {
 
   .footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     width: 100%;
 
@@ -348,32 +360,5 @@ button {
         gap: 20px;
       }
     }
-  }
-}
-
-@media (max-width: 600px) {
-  .content {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 2000px) {
-  .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 30px auto;
-    gap: 40px;
-  }
-}
-
-@media (max-width: 2000px) {
-  .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 30px auto;
-    gap: 40px;
-    width: 100%;
-    border: 1px solid red;
   }
 }
