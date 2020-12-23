@@ -323,14 +323,14 @@ h6 {
       }
 
       .text {
-        margin-top: 160px;
+        margin-top: 220px;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
 
         button {
-          margin-left: 100px;
+          margin-left: 120px;
         }
       }
 
@@ -348,6 +348,10 @@ h6 {
       justify-content: center;
       align-items: center;
       flex-direction: column;
+
+      h1 {
+        text-align: center;
+      }
     }
 
     .difference {
@@ -371,6 +375,10 @@ h6 {
     .content {
       display: flex;
       flex-direction: column;
+
+      h1 {
+        text-align: center;
+      }
     }
   }
 
