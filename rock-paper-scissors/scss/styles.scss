@@ -62,6 +62,7 @@ img {
       label {
         text-transform: uppercase;
         color: hsl(229, 64%, 46%);
+        letter-spacing: 2px;
       }
 
       h2 {
@@ -104,24 +105,24 @@ img {
     .line::after {
       content: "";
       position: absolute;
-      top: 90px;
+      top: 91px;
       left: -60px;
       transform: rotate(60deg);
       transform-origin: left center;
       height: 100%;
-      width: 82px;
+      width: 83px;
       background-color: rgba(0, 0, 0, 0.2);
     }
 
     .line::before {
       content: "";
       position: absolute;
-      top: 155px;
+      top: 160px;
       left: 0px;
       transform: rotate(120deg);
       transform-origin: center right;
       height: 100%;
-      width: 80px;
+      width: 82px;
       background-color: rgba(0, 0, 0, 0.2);
     }
 
