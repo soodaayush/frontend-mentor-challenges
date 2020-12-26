@@ -38,7 +38,8 @@ h5,
 h6,
 label,
 button,
-span {
+span,
+a {
   font-family: "Barlow Condensed", sans-serif;
 }
 
@@ -68,7 +69,7 @@ span {
       }
 
       span {
-        letter-spacing: 2px;
+        letter-spacing: 3px;
         opacity: 0.5;
       }
     }
@@ -92,7 +93,7 @@ span {
 
       span {
         text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 3px;
         opacity: 0.5;
       }
 
@@ -115,18 +116,23 @@ span {
     height: 800px;
     width: 50%;
     border: 5px solid blue;
+    overflow: hidden;
 
     .bg-blue {
       background-color: #edf2f6;
-      height: 50vh;
-      width: 50%;
+      height: 50%;
+      width: 49%;
       z-index: -1;
       position: absolute;
       border-bottom-left-radius: 50px;
+      overflow: hidden;
     }
 
     .login {
       margin-left: 30px;
+      color: #868b91;
+      font-weight: 600;
+      text-transform: uppercase;
     }
 
     .links {
@@ -141,8 +147,10 @@ span {
       }
 
       a {
-        color: #222a41;
+        color: #222839;
         text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
       }
     }
 
@@ -153,8 +161,8 @@ span {
       img {
         width: 150%;
         position: absolute;
-        top: 150px;
-        overflow: hidden;
+        top: 100px;
+        left: 180px;
       }
     }
   }
