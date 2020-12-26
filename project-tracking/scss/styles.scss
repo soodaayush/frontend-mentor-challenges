@@ -115,7 +115,15 @@ span {
     height: 800px;
     width: 50%;
     border: 5px solid blue;
-    background: linear-gradient(to bottom, 50%, #edf2f6);
+
+    .bg-blue {
+      background-color: #edf2f6;
+      height: 50vh;
+      width: 50%;
+      z-index: -1;
+      position: absolute;
+      border-bottom-left-radius: 50px;
+    }
 
     .login {
       margin-left: 30px;
@@ -140,6 +148,14 @@ span {
 
     .image {
       margin-top: 50px;
+      position: relative;
+
+      img {
+        width: 150%;
+        position: absolute;
+        top: 150px;
+        overflow: hidden;
+      }
     }
   }
 }
