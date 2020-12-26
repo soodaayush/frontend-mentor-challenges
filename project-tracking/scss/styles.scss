@@ -45,13 +45,10 @@ a {
 
 .container {
   display: flex;
-  border: 5px solid red;
   height: 100vh;
 
   .left {
-    height: 800px;
     width: 50%;
-    border: 5px solid blue;
 
     .monograph {
       display: flex;
@@ -113,15 +110,13 @@ a {
   }
 
   .right {
-    height: 800px;
     width: 50%;
-    border: 5px solid blue;
     overflow: hidden;
 
     .bg-blue {
       background-color: #edf2f6;
       height: 50%;
-      width: 49%;
+      width: 50%;
       z-index: -1;
       position: absolute;
       border-bottom-left-radius: 50px;
