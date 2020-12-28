@@ -40,6 +40,13 @@ select {
 }
 
 .container {
+  .content {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+  }
+
   .header {
     background-color: white;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -108,6 +115,7 @@ select {
 
   .rows {
     margin-top: 50px;
+    padding: 40px 0;
 
     .content {
       display: flex;
@@ -123,19 +131,75 @@ select {
           width: 300px;
           border-radius: 10px;
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          border-radius: 5px;
 
-          .image {
-            img {
-              height: 150px;
-              width: 100%;
-              border-radius: 5px 5px 0 0;
-            }
+          .germany {
+            height: 50%;
+            background-image: url(../images/germany.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+          }
+
+          .usa {
+            height: 50%;
+            background-image: url(../images/usa.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+          }
+
+          .brazil {
+            height: 50%;
+            background-image: url(../images/brazil.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+          }
+
+          .iceland {
+            height: 50%;
+            background-image: url(../images/iceland.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+          }
+
+          .afghan {
+            height: 50%;
+            background-image: url(../images/afghanistan.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+          }
+
+          .aland {
+            height: 50%;
+            background-image: url(../images/aland.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+          }
+
+          .albania {
+            height: 50%;
+            background-image: url(../images/albania.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+          }
+
+          .algeria {
+            height: 50%;
+            background-image: url(../images/algeria.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
           }
 
           .info {
             padding-left: 20px;
-            height: 135px;
-            border-radius: 0 0 5px 5px;
+            height: 145px;
             background-color: white;
 
             h4 {
@@ -155,20 +219,20 @@ select {
   }
 }
 
-@media (max-width: 2000px) {
-  .content {
-    display: flex;
-    width: 90%;
-    margin: auto;
-    height: 100%;
-  }
-}
+// @media (max-width: 2000px) {
+//   .content {
+//     display: flex;
+//     width: 80%;
+//     margin: auto;
+//     height: 100%;
+//   }
+// }
 
-@media (min-width: 2000px) {
-  .content {
-    display: flex;
-    width: 50%;
-    margin: auto;
-    height: 100%;
-  }
-}
+// @media (min-width: 2000px) {
+//   .content {
+//     display: flex;
+//     width: 50%;
+//     margin: auto;
+//     height: 100%;
+//   }
+// }
