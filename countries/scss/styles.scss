@@ -40,13 +40,6 @@ select {
 }
 
 .container {
-  .content {
-    display: flex;
-    width: 80%;
-    margin: auto;
-    height: 100%;
-  }
-
   .header {
     background-color: white;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -219,20 +212,37 @@ select {
   }
 }
 
-// @media (max-width: 2000px) {
-//   .content {
-//     display: flex;
-//     width: 80%;
-//     margin: auto;
-//     height: 100%;
-//   }
-// }
+@media (max-width: 2000px) {
+  .content {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+  }
+}
 
-// @media (min-width: 2000px) {
-//   .content {
-//     display: flex;
-//     width: 50%;
-//     margin: auto;
-//     height: 100%;
-//   }
-// }
+@media (min-width: 2000px) {
+  .content {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    height: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .search {
+    .content {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
