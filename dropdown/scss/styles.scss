@@ -44,7 +44,7 @@ nav {
       display: inline-block;
 
       &:hover {
-        background: #444;
+        background-color: #444;
       }
 
       &:hover .sub-menu {
@@ -52,13 +52,9 @@ nav {
       }
 
       a {
-        color: #444;
+        color: tomato;
         display: block;
         padding: 0.75em 1.75em;
-
-        &:hover  {
-          color: white;
-        }
       }
     }
   }
