@@ -58,6 +58,7 @@ button {
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      padding: 50px 30px;
 
       .logo {
         margin-bottom: 100px;
@@ -96,6 +97,11 @@ button {
           width: 100%;
           background-color: #0084bd;
           font-weight: 600;
+
+          &:hover {
+            transition: 0.2s ease-in-out;
+            background-color: #0074ab;
+          }
         }
       }
 
@@ -133,6 +139,11 @@ button {
           width: 100%;
           font-weight: 600;
           padding: 10px 0;
+
+          &:hover {
+            background-color: #383f47;
+            transition: 0.2s ease-in-out;
+          }
         }
       }
     }
@@ -143,7 +154,8 @@ button {
       align-items: center;
       flex-direction: column;
       color: #a6aaac;
-      margin-top: 50px;
+      margin-top: 20px;
+      padding-bottom: 20px;
 
       a {
         color: #a6aaac;
@@ -189,7 +201,6 @@ button {
 
     .form {
       width: 500px;
-      padding: 0 30px;
     }
   }
 
@@ -209,6 +220,7 @@ button {
 
     .form {
       width: 650px;
+      padding: 50px 0;
     }
   }
 
@@ -221,6 +233,7 @@ button {
   .sign-up {
     width: 40vw;
   }
+
   .form {
     width: 650px;
   }
