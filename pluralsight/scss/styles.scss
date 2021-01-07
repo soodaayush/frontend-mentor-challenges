@@ -54,13 +54,15 @@ button {
     align-items: center;
     flex-direction: column;
     background-color: #0d0f12;
+    width: 40vw;
 
     .form {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      padding: 50px 30px;
+      padding: 50px;
+      width: 600px;
 
       .logo {
         margin-bottom: 100px;
@@ -193,56 +195,5 @@ button {
         border: 3px solid #2f5087;
       }
     }
-  }
-}
-
-@media (max-width: 1800px) {
-  .sign-up {
-    width: 55vw;
-    padding: 100px 0;
-
-    .form {
-      width: 500px;
-    }
-  }
-
-  .image {
-    width: 45vw;
-
-    p {
-      width: 500px;
-      margin-left: 50px;
-    }
-  }
-}
-
-@media (min-width: 1900px) {
-  .sign-up {
-    width: 40vw;
-
-    .form {
-      width: 650px;
-      padding: 50px 0;
-    }
-  }
-
-  .image {
-    width: 60vw;
-  }
-}
-
-@media (min-width: 2000px) {
-  .sign-up {
-    width: 40vw;
-  }
-
-  .form {
-    width: 650px;
-  }
-}
-
-@media (max-width: 600px) {
-  .image {
-    display: none;
   }
 }
