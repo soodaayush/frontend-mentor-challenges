@@ -42,10 +42,8 @@ button {
 }
 
 .container {
-  border: 5px solid red;
-
   .showcase {
-    height: 60vh;
+    height: 80vh;
     background-image: url(../images/desktop/image-hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -90,7 +88,6 @@ button {
   }
 
   .leader {
-    border: 5px solid purple;
     padding: 50px 0;
 
     .content {
