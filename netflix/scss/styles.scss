@@ -1,20 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sriracha&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
-
 *,
 *::after,
 *::before {
@@ -212,22 +195,22 @@ input {
 
         .browsing {
           position: absolute;
-          left: 60px;
-          top: 70px;
-          height: 180px;
+          left: 45px;
+          top: 50px;
+          height: 150px;
           z-index: -1;
         }
 
         .stranger-things {
           position: absolute;
-          left: 85px;
+          left: 65px;
           top: 35px;
-          height: 155px;
+          height: 130px;
           z-index: -1;
         }
 
         img {
-          width: 70%;
+          width: 100%;
         }
       }
     }
@@ -304,7 +287,7 @@ input {
     }
 
     .flex {
-      width: 50%;
+      width: 70%;
       margin: auto;
       display: flex;
       justify-content: center;
