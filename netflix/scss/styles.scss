@@ -39,19 +39,28 @@ input {
   outline: none;
 }
 
+.showcase::after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .container {
   .showcase::after {
     content: "";
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 80%;
     z-index: 1;
-    background: rgba(10, 10, 10, 10);
+    background: rgba(0, 0, 0, 0.6);
   }
 
   .showcase {
-    height: 60vh;
+    height: 80vh;
     background-image: url(../images/showcase.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -60,6 +69,7 @@ input {
 
     .header {
       padding: 15px 0;
+      z-index: 99;
 
       .flex {
         display: flex;
@@ -69,12 +79,16 @@ input {
         width: 80%;
 
         .logo {
+          z-index: 99;
+
           img {
             height: 40px;
           }
         }
 
         .sign-in {
+          z-index: 99;
+
           button {
             padding: 10px 15px;
             background-color: #e50914;
@@ -94,21 +108,29 @@ input {
       color: white;
       text-align: center;
       padding-bottom: 100px;
+      z-index: 99;
 
       h1 {
         margin-bottom: 0;
         line-height: 1.2;
         font-size: 50px;
+        z-index: 99;
       }
 
       p {
         font-size: 20px;
+        z-index: 99;
+      }
+
+      label {
+        z-index: 99;
       }
 
       .sign-up {
         display: flex;
         margin-top: 10px;
         position: relative;
+        z-index: 99;
 
         input {
           width: 480px;
@@ -293,7 +315,6 @@ input {
   }
 
   .footer {
-    height: 30vh;
     color: #757575;
     padding: 50px 0;
 
@@ -329,12 +350,21 @@ input {
 
       .language {
         margin-top: 20px;
+        position: relative;
+
+        img {
+          height: 20px;
+          top: 10px;
+          left: 10px;
+          position: absolute;
+        }
 
         select {
           padding: 10px;
           background: transparent;
           color: #757575;
           border-radius: 5px;
+          padding-left: 35px;
         }
       }
 
@@ -351,7 +381,7 @@ input {
     .browsing {
       position: absolute;
       left: 45px;
-      top: 50px;
+      top: 55px;
       height: 150px;
       z-index: -1;
     }
@@ -366,7 +396,7 @@ input {
 
     .card {
       bottom: 20px;
-      left: 70px;
+      left: 30px;
       width: 300px;
     }
   }
@@ -406,6 +436,44 @@ input {
   .footer {
     .flex {
       width: 40%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .showcase {
+    h1 {
+      font-size: 15px;
+    }
+  }
+
+  .spice {
+    .flex {
+      flex-direction: column;
+    }
+  }
+  .faq {
+    .flex {
+      width: 100%;
+
+      .question {
+        width: 100%;
+      }
+    }
+  }
+
+  .footer {
+    .row {
+      text-align: center;
+    }
+
+    .language {
+      text-align: center;
+    }
+
+    .cols {
+      flex-direction: column;
+      text-align: center;
     }
   }
 }
