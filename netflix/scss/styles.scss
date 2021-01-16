@@ -148,6 +148,7 @@ input {
           padding-left: 30px;
           padding-right: 30px;
           text-transform: uppercase;
+          font-size: 20px;
 
           &:hover {
             background-color: #f40612;
@@ -156,7 +157,7 @@ input {
 
         img {
           position: absolute;
-          left: 605px;
+          left: 650px;
           top: 18px;
         }
       }
@@ -297,6 +298,7 @@ input {
           padding-left: 30px;
           padding-right: 30px;
           text-transform: uppercase;
+          font-size: 20px;
 
           &:hover {
             background-color: #f40612;
@@ -305,8 +307,8 @@ input {
 
         img {
           position: absolute;
-          left: 605px;
-          top: 12px;
+          left: 650px;
+          top: 13px;
         }
       }
     }
@@ -380,7 +382,7 @@ input {
   }
 
   .showcase::after {
-    height: 80%;
+    height: 100%;
   }
 
   .spice {
@@ -390,6 +392,7 @@ input {
       top: 55px;
       height: 150px;
       z-index: -1;
+      width: 75%;
     }
 
     .stranger-things {
@@ -398,6 +401,7 @@ input {
       top: 35px;
       height: 130px;
       z-index: -1;
+      width: 65%;
     }
 
     .card {
