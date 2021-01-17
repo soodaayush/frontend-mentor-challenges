@@ -45,6 +45,8 @@
       padding-top: 20px;
       padding-bottom: 120px;
       opacity: 0.8;
+      margin-bottom: 80px;
+      border-radius: 5px;
 
       .inputs {
         display: flex;
@@ -152,6 +154,7 @@
 
   .register-footer {
     display: flex;
+    background-color: black;
 
     .inner-footer {
       background-color: black;
@@ -175,6 +178,7 @@
       width: 80%;
       margin: auto;
       padding: 20px 0;
+      z-index: 99;
     }
 
     .questions,
@@ -217,12 +221,6 @@
 
 @media (min-width: 2000px) {
   .register-footer {
-    margin-top: 365px;
-  }
-}
-
-@media (max-width: 2000px) {
-  .register-footer {
-    margin-top: 100px;
+    margin-top: 405px;
   }
 }
