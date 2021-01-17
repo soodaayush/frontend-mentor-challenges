@@ -159,9 +159,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      z-index: 99;
-      padding: 40px 0;
       opacity: 0.8;
+      border: 1px solid red;
     }
 
     a {
@@ -175,6 +174,7 @@
       flex-direction: column;
       width: 80%;
       margin: auto;
+      padding: 20px 0;
     }
 
     .questions,
@@ -223,6 +223,6 @@
 
 @media (max-width: 2000px) {
   .register-footer {
-    margin-top: 280px;
+    margin-top: 100px;
   }
 }
