@@ -32,7 +32,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 105%;
+  height: 130%;
   z-index: 1;
   background: rgba(0, 0, 0, 0.6);
 }
@@ -71,9 +71,9 @@ img {
       padding: 0 50px;
       padding-top: 20px;
       padding-bottom: 40px;
-      opacity: 0.8;
       margin-bottom: 120px;
       border-radius: 5px;
+      opacity: 0.8;
 
       .inputs {
         display: flex;
@@ -87,6 +87,7 @@ img {
           outline: none;
           background-color: #333333;
           padding-left: 20px;
+          color: white;
         }
       }
 
@@ -103,6 +104,7 @@ img {
           border-radius: 5px;
           border: none;
           outline: none;
+          cursor: pointer;
         }
 
         .extras {
@@ -183,7 +185,6 @@ img {
 
   .register-footer {
     display: flex;
-    opacity: 0.9;
     z-index: 1;
     height: 100%;
 
