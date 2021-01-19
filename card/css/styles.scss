@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Cabin", sans-serif;
+  background: #ccc;
+}
+
+p,
+h1 {
+  margin: 0;
+}
+  
+.container {
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  gap: 20px;
+  place-content: center;
+}
+
+.container .card {
+  text-align: center;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: stretch;
+  width: 300px;
+  height: 400px;
+}
+
+.container .card p {
+  margin-top: 15px;
+}
+
+.container .card h1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #000;
+  color: #fff;
+}
+
+.container .card > * {
+  flex: 1;
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
