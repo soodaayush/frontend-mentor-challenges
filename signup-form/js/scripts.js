@@ -25,8 +25,22 @@ leftBanner.className = "left-banner";
 
 myContainer.appendChild(leftBanner);
 
-leftBanner.innerHTML =
-  "<h1>Learn to code by <br /> watching others</h1> <br /> <p>See how experienced developers solve problems in real-time. <br /> Watching scripted tutorials is great, but understanding how <br /> developers think is invaluable";
+let heading = document.createElement("h1");
+
+heading.className = "title";
+
+heading.innerHTML = "Learn to code by <br /> watching others";
+
+leftBanner.appendChild(heading);
+
+let paragraph = document.createElement("p");
+
+paragraph.className = "sentence";
+
+paragraph.innerHTML =
+  "See how experienced developers solve problems in real-time. <br /> Wathcing scripted tutorials is great, but understanding how <br /> developers think is invaluable";
+
+leftBanner.appendChild(paragraph);
 
 let form = document.createElement("div");
 
@@ -40,7 +54,12 @@ topBanner.className = "top-banner";
 
 form.appendChild(topBanner);
 
-topBanner.innerHTML = "<label>Try it 7 days then $20/mo. thereafter</label>";
+let topLabel = document.createElement("label");
+
+topLabel.innerHTML =
+  "<strong>Try it free 7 days</strong> then $20/mo. thereafter";
+
+topBanner.appendChild(topLabel);
 
 let signUpForm = document.createElement("div");
 
@@ -106,6 +125,8 @@ box4.appendChild(input4);
 
 let submitButton = document.createElement("button");
 
+submitButton.innerHTML = "claim your free trial"
+
 submitButton.className = "submit-button";
 
 signUpForm.appendChild(submitButton);
@@ -114,10 +135,23 @@ let terms = document.createElement("div");
 
 terms.className = "signup-terms";
 
-terms.innerHTML =
-  "By clicking this button, you are agreeing to our <a class=link href=>Terms and Services</a>";
-
 signUpForm.appendChild(terms);
+
+let termsLabel = document.createElement("label");
+
+termsLabel.className = "termlabel";
+
+termsLabel.innerHTML = "By clicking the button, you are agreeing to our";
+
+terms.appendChild(termsLabel);
+
+let termsLink = document.createElement("a");
+
+termsLink.className = "termlink";
+
+termsLink.innerHTML = "Terms and Services";
+
+terms.appendChild(termsLink);
 
 let noMargin = document.querySelectorAll(".nomargin");
 
@@ -182,12 +216,14 @@ mySignup.style.backgroundColor = "#fff";
 mySignup.style.alignItems = "flex-start";
 mySignup.style.flexDirection = "column";
 mySignup.style.borderRadius = "15px";
+mySignup.style.padding = "20px 0";
 
 let myBox = document.querySelectorAll(".box");
 
 myBox.forEach((element) => {
   element.style.margin = "auto 40px";
   element.style.marginBottom = "20px";
+  element.style.width = "88%";
 });
 
 let myInput = document.querySelectorAll(".input");
@@ -221,13 +257,15 @@ myTerms.style.justifyContent = "center";
 myTerms.style.alignItems = "center";
 myTerms.style.textAlign = "center";
 myTerms.style.margin = "20px 0";
+myTerms.style.width = "100%";
 
-let myLabel = document.querySelector(".label");
+let myLabel = document.querySelector(".termlabel");
 
 myLabel.style.paddingRight = "10px";
 myLabel.style.fontSize = "13px";
 
-let myLink = document.querySelector(".link");
+let myLink = document.querySelector(".termlink");
 
 myLink.style.color = "hsl(0, 100%, 74%)";
 myLink.style.fontWeight = "bold";
+myLink.style.cursor = "pointer";
