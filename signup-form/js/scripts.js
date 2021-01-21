@@ -131,6 +131,8 @@ box4.appendChild(input4);
 
 let submit = document.createElement("div");
 
+submit.className = "submit";
+
 SignUpBoxes.appendChild(submit);
 
 let submitButton = document.createElement("button");
@@ -228,11 +230,10 @@ mySignup.style.flexDirection = "column";
 mySignup.style.borderRadius = "15px";
 mySignup.style.padding = "20px 0";
 
-let signUp = document.querySelector(".signup");
+let signUpBox = document.querySelector(".signup");
 
-signUp.style.padding = "20px 0";
-signUp.style.width = "90%";
-signUp.style.margin = "20px auto";
+signUpBox.style.width = "90%";
+signUpBox.style.margin = "0 auto";
 
 let myBox = document.querySelectorAll(".box");
 
@@ -254,8 +255,7 @@ myInput.forEach((element) => {
 });
 
 let myButton = document.querySelector(".submit-button");
-
-myButton.style.width = "89%";
+myButton.style.width = "92%";
 myButton.style.fontSize = "16px";
 myButton.style.margin = "auto 40px";
 myButton.style.textTransform = "uppercase";
