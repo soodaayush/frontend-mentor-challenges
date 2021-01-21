@@ -67,11 +67,17 @@ signUpForm.className = "signup-form";
 
 form.appendChild(signUpForm);
 
+let SignUpBoxes = document.createElement("div");
+
+SignUpBoxes.className = "signup";
+
+signUpForm.appendChild(SignUpBoxes);
+
 let box1 = document.createElement("div");
 
 box1.className = "box";
 
-signUpForm.appendChild(box1);
+SignUpBoxes.appendChild(box1);
 
 let input1 = document.createElement("input");
 
@@ -85,7 +91,7 @@ let box2 = document.createElement("div");
 
 box2.className = "box";
 
-signUpForm.appendChild(box2);
+SignUpBoxes.appendChild(box2);
 
 let input2 = document.createElement("input");
 
@@ -99,7 +105,7 @@ let box3 = document.createElement("div");
 
 box3.className = "box";
 
-signUpForm.appendChild(box3);
+SignUpBoxes.appendChild(box3);
 
 let input3 = document.createElement("input");
 
@@ -113,7 +119,7 @@ let box4 = document.createElement("div");
 
 box4.className = "box";
 
-signUpForm.appendChild(box4);
+SignUpBoxes.appendChild(box4);
 
 let input4 = document.createElement("input");
 
@@ -123,13 +129,17 @@ input4.className = "input";
 
 box4.appendChild(input4);
 
+let submit = document.createElement("div");
+
+SignUpBoxes.appendChild(submit);
+
 let submitButton = document.createElement("button");
 
-submitButton.innerHTML = "claim your free trial"
+submitButton.innerHTML = "claim your free trial";
 
 submitButton.className = "submit-button";
 
-signUpForm.appendChild(submitButton);
+submit.appendChild(submitButton);
 
 let terms = document.createElement("div");
 
@@ -193,7 +203,7 @@ let myForm = document.querySelector(".form");
 
 myForm.style.display = "flex";
 myForm.style.flexDirection = "column";
-myForm.style.width = "35%";
+myForm.style.width = "45%";
 myForm.style.marginRight = "20px";
 
 let myBanner = document.querySelector(".top-banner");
@@ -218,12 +228,17 @@ mySignup.style.flexDirection = "column";
 mySignup.style.borderRadius = "15px";
 mySignup.style.padding = "20px 0";
 
+let signUp = document.querySelector(".signup");
+
+signUp.style.padding = "20px 0";
+signUp.style.width = "90%";
+signUp.style.margin = "20px auto";
+
 let myBox = document.querySelectorAll(".box");
 
 myBox.forEach((element) => {
   element.style.margin = "auto 40px";
   element.style.marginBottom = "20px";
-  element.style.width = "88%";
 });
 
 let myInput = document.querySelectorAll(".input");
@@ -240,7 +255,7 @@ myInput.forEach((element) => {
 
 let myButton = document.querySelector(".submit-button");
 
-myButton.style.width = "91%";
+myButton.style.width = "89%";
 myButton.style.fontSize = "16px";
 myButton.style.margin = "auto 40px";
 myButton.style.textTransform = "uppercase";
@@ -249,6 +264,7 @@ myButton.style.color = "#fff";
 myButton.style.borderRadius = "5px";
 myButton.style.border = "none";
 myButton.style.padding = "20px 0";
+myButton.style.cursor = "pointer";
 
 let myTerms = document.querySelector(".signup-terms");
 
