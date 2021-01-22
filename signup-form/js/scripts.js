@@ -5,13 +5,13 @@ myHtml.style.webkitFontSmoothing = "antialiased";
 myHtml.style.mozOsxFontSmoothing = "grayscale";
 myHtml.style.fontSize = "16px";
 myHtml.style.lineHeight = "1.6";
-myHtml.style.fontFamily = "Arial";
 
-let myBody = document.querySelector(".body");
-
+let myBody = document.getElementsByTagName('body')[0];;
+console.log(myBody);
 myBody.style.margin = "0";
 myBody.style.backgroundColor = "hsl(0, 100%, 74%)";
-myBody.style.backgroundImage = "url(../images/bg-intro-desktop.png)";
+myBody.style.backgroundImage = 'url(images/bg-intro-desktop.png)';
+// myBody.css('background-image', 'url(../images/bg-intro-desktop.png)');
 
 let myContainer = document.createElement("div");
 
@@ -81,7 +81,7 @@ SignUpBoxes.appendChild(box1);
 
 let input1 = document.createElement("input");
 
-input1.setAttribute("text", "username");
+input1.setAttribute("placeholder", "First Name");
 
 input1.className = "input";
 
@@ -94,6 +94,8 @@ box2.className = "box";
 SignUpBoxes.appendChild(box2);
 
 let input2 = document.createElement("input");
+
+input2.setAttribute("placeholder", "Last Name");
 
 input2.setAttribute("text", "username");
 
@@ -115,6 +117,8 @@ input3.className = "input";
 
 box3.appendChild(input3);
 
+input3.setAttribute("placeholder", "Email Address");
+
 let box4 = document.createElement("div");
 
 box4.className = "box";
@@ -122,6 +126,8 @@ box4.className = "box";
 SignUpBoxes.appendChild(box4);
 
 let input4 = document.createElement("input");
+
+input4.setAttribute("placeholder", "Password");
 
 input4.setAttribute("password", "username");
 
@@ -196,6 +202,7 @@ myHeader.style.fontSize = "60px";
 myHeader.style.margin = "20px 0";
 myHeader.style.fontWeight = "700";
 myHeader.style.lineHeight = "1.2";
+myHeader.style.marginRight = "30px";
 
 let myParagraph = document.querySelector(".sentence");
 
@@ -232,8 +239,8 @@ mySignup.style.padding = "20px 0";
 
 let signUpBox = document.querySelector(".signup");
 
-signUpBox.style.width = "90%";
-signUpBox.style.margin = "0 auto";
+signUpBox.style.width = "95%";
+signUpBox.style.padding = "20px 0";
 
 let myBox = document.querySelectorAll(".box");
 
@@ -248,14 +255,14 @@ myInput.forEach((element) => {
   element.style.width = "100%";
   element.style.height = "45px";
   element.style.paddingLeft = "20px";
-  element.style.borderRadius = "10px";
+  element.style.borderRadius = "5px";
   element.style.fontWeight = "800";
   element.style.border = "1px solid gray";
   element.style.outline = "none";
 });
 
 let myButton = document.querySelector(".submit-button");
-myButton.style.width = "92%";
+myButton.style.width = "89%";
 myButton.style.fontSize = "16px";
 myButton.style.margin = "auto 40px";
 myButton.style.textTransform = "uppercase";
@@ -272,16 +279,18 @@ myTerms.style.display = "flex";
 myTerms.style.justifyContent = "center";
 myTerms.style.alignItems = "center";
 myTerms.style.textAlign = "center";
-myTerms.style.margin = "20px 0";
 myTerms.style.width = "100%";
+myTerms.style.paddingBottom = "20px";
 
 let myLabel = document.querySelector(".termlabel");
 
 myLabel.style.paddingRight = "10px";
-myLabel.style.fontSize = "13px";
+myLabel.style.fontSize = "11px";
+myLabel.style.opacity = "0.5";
 
 let myLink = document.querySelector(".termlink");
 
 myLink.style.color = "hsl(0, 100%, 74%)";
 myLink.style.fontWeight = "bold";
 myLink.style.cursor = "pointer";
+myLink.style.fontSize = "11px";
