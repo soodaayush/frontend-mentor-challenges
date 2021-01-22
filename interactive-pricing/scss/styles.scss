@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  font-size: 16px;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(230, 100%, 99%);
+  background-image: url(../images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+
+  .title {
+    background-image: url(../images/pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+
+    p {
+      margin: 0;
+      color: hsl(225, 20%, 60%);
+    }
+
+    h1 {
+      margin: 0;
+      color: hsl(227, 35%, 25%);
+    }
+  }
+
+  .pricing-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 40px;
+    background-color: white;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    .pageviews {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+
+      .views {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 12px;
+      }
+
+      .price {
+        display: flex;
+        align-items: center;
+
+        h1 {
+          margin: 0;
+        }
+
+        label {
+          padding-left: 5px;
+        }
+      }
+    }
+
+    .switcher {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      margin-top: 30px;
+      background-color: hsl(224, 65%, 95%);
+      border-radius: 20px;
+      height: 5px;
+      position: relative;
+
+      .background {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: hsl(174, 77%, 80%);
+        width: 52%;
+        border-radius: 20px;
+      }
+
+      .switch {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: hsl(174, 86%, 45%);
+        box-shadow: 1px 12px 30px hsl(174, 86%, 45%);
+        cursor: pointer;
+
+        img {
+          height: 10px;
+        }
+      }
+    }
+
+    .billing {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+      gap: 20px;
+
+      label {
+        font-size: 12px;
+      }
+
+      .yearly {
+        span {
+          font-size: 10px;
+          background-color: hsl(14, 92%, 95%);
+          color: hsl(15, 100%, 70%);
+          padding: 2px 5px;
+          border-radius: 20px;
+          margin-left: 10px;
+        }
+      }
+
+      .switch {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 40px;
+        border-radius: 20px;
+        height: 23px;
+        background-color: hsl(223, 50%, 87%);
+        cursor: pointer;
+
+        .circle {
+          border-radius: 50%;
+          background-color: white;
+          margin-left: 3px;
+          height: 17px;
+          width: 15px;
+        }
+      }
+    }
+
+    .start-trial {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+      width: 100%;
+      padding-top: 20px;
+      border-top: 1px solid #f5f5f7;
+
+      .list {
+        display: flex;
+        flex-direction: column;
+
+        .perk {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 10px;
+
+          img {
+            height: 10px;
+          }
+
+          label {
+            padding-left: 10px;
+            font-size: 12px;
+          }
+        }
+      }
+
+      .start {
+        button {
+          background-color: hsl(227, 35%, 25%);
+          color: hsl(226, 100%, 87%);
+          font-family: "Manrope", sans-serif;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          width: 150px;
+          padding: 12px 0;
+          border-radius: 20px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
