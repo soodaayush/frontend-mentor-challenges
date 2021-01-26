@@ -23,6 +23,7 @@
           <div class="col">
             <label class="mb-2 mt-4">Project</label>
             <select
+              id="project"
               class="form-select mb-3"
               aria-label=".form-select-lg example"
             >
@@ -36,7 +37,11 @@
         <div class="row mb-2 p-lg-3">
           <div class="col">
             <label class="mb-2">Member</label>
-            <select class="form-select" aria-label=".form-select-lg example">
+            <select
+              id="member"
+              class="form-select"
+              aria-label=".form-select-lg example"
+            >
               <option selected>Guy</option>
               <option value="1">IKEA</option>
               <option value="2">Two</option>
@@ -47,6 +52,7 @@
             <label class="mb-2">Emp#</label>
             <div class="input-group">
               <input
+                id="emp#"
                 type="text"
                 class="form-control"
                 placeholder=""
@@ -60,6 +66,7 @@
           <div class="col">
             <label class="mb-2 mt-2">Role</label>
             <select
+              id="role"
               class="form-select mb-3"
               aria-label=".form-select-lg example"
             >
@@ -301,7 +308,9 @@
         </div>
         <div class="row mb-4 p-lg-3">
           <div class="col-6">
-            <button type="button" class="btn btn-primary w-100">Submit</button>
+            <button type="button" class="btn btn-primary w-100" id="submit">
+              Submit
+            </button>
           </div>
           <div class="col-6">
             <button type="button" class="btn btn-primary w-100">Cancel</button>
@@ -309,6 +318,7 @@
         </div>
       </div>
     </div>
+    <script src="js/scripts.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
