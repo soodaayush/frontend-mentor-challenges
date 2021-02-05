@@ -23,6 +23,7 @@ body {
 
 a {
   text-decoration: none;
+  outline: none;
 }
 
 img {
@@ -112,6 +113,14 @@ img {
     border-radius: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 10px 17px 29px 10px;
 
+    .showcase-image {
+      border-radius: 10px 10px 0 0;
+      height: 320px;
+      background-image: url(../images/about-background.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
     h1,
     p {
       padding: 0 20px;
@@ -120,6 +129,7 @@ img {
     img {
       border: 3px solid hsl(263, 55%, 52%);
       width: 100%;
+      border-radius: 10px 10px 0 0;
     }
   }
 
@@ -171,18 +181,21 @@ img {
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 10px 17px 29px 10px;
 
-    .study {
-      display: flex;
-      align-items: center;
+    li {
       margin-bottom: 20px;
+    }
 
-      label {
-        padding-right: 20px;
-      }
+    a {
+      display: inline;
+      color: black;
 
-      img {
-        height: 50px;
+      &:hover {
+        text-decoration: underline;
       }
+    }
+
+    img {
+      height: 20px;
     }
   }
 
@@ -211,6 +224,23 @@ img {
     color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 10px 17px 29px 10px;
     background-color: hsl(263, 55%, 52%);
+
+    .images {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-direction: column;
+
+      .row {
+        display: flex;
+        gap: 50px;
+      }
+    }
+
+    img {
+      height: 40px;
+    }
   }
 
   .box-7 {
@@ -220,6 +250,23 @@ img {
     color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 10px 17px 29px 10px;
     background-color: hsl(217, 19%, 35%);
+
+    .images {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-direction: column;
+
+      .row {
+        display: flex;
+        gap: 50px;
+      }
+    }
+
+    img {
+      height: 50px;
+    }
   }
 
   .box-8 {
@@ -238,22 +285,5 @@ img {
     color: black;
     box-shadow: rgba(100, 100, 111, 0.2) 10px 17px 29px 10px;
     background-color: white;
-
-    .images {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      flex-direction: column;
-
-      .row {
-        display: flex;
-        gap: 50px;
-      }
-    }
-
-    img {
-      height: 50px;
-    }
   }
 }
