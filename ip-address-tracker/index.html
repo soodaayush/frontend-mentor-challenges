@@ -21,48 +21,36 @@
           <h1>IP Address Tracker</h1>
           <div class="search-box">
             <input
+              id="ipSearch"
               type="text"
               name="label element"
               placeholder="Search for any IP address or domain"
+              value="143.244.47.70"
             />
-            <button name="press">
+            <button id="ipBtn" name="press">
               <img src="images/icon-arrow.svg" alt="arrow" />
             </button>
           </div>
         </div>
         <div class="middle-block">
-          <div class="info">
+          <div id="ipAddress" class="info">
             <label>ip address</label>
-            <br />
-            <strong>192.212.174.101</strong>
           </div>
-          <div class="info">
+          <div id="location" class="info">
             <label>location</label>
-            <br />
-            <strong
-              >Brooklyn, NY <br />
-              10001</strong
-            >
           </div>
-          <div class="info">
+          <div id="timeZone" class="info">
             <label>Timezone</label>
-            <br />
-            <strong>UTC -05:00</strong>
           </div>
-          <div class="info no-border">
+          <div id="isp" class="info no-border">
             <label>isp</label>
-            <br />
-            <strong
-              >SpaceX <br />
-              Starlink</strong
-            >
           </div>
         </div>
       </div>
     </div>
     <div class="bottom-block">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193747.65734576355!2d-74.08508155679834!3d40.645159363485455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24416947c2109%3A0x82765c7404007886!2sBrooklyn%2C%20NY%2C%20USA!5e0!3m2!1sen!2sca!4v1607013044311!5m2!1sen!2sca"
+        id="map"
         width="100%"
         title="map"
         height="850"
@@ -73,5 +61,6 @@
         tabindex="0"
       ></iframe>
     </div>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

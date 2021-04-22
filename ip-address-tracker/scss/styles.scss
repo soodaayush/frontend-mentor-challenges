@@ -1,14 +1,3 @@
-/*
- #333 - dark gray
- #fff - white
- #000 - black
- #ccc - lightgrey
- #ff0 - yellow
- #ff0000 - red
- #00ff00 - green
- #0000ff - blue
-*/
-
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 
 *,
@@ -24,7 +13,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   line-height: 1.6;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 body {
@@ -35,17 +24,20 @@ a {
   text-decoration: none;
 }
 
+input,
+button {
+  outline: none;
+  border: none;
+}
+
 .top-block {
   background-image: url(../images/pattern-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-  height: 45vh;
+  height: 50vh;
 
   .search {
-    margin-top: 10px;
-    height: 200px;
-    width: 30%;
     display: flex;
     justify-content: flex-start;
     margin: auto;
@@ -94,8 +86,6 @@ a {
     .middle-block {
       background-color: white;
       border-radius: 20px;
-      height: 150px;
-      bottom: -75px;
       padding-top: 20px;
       padding-bottom: 20px;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -134,4 +124,22 @@ a {
 
 .bottom-block {
   height: 65vh;
+}
+
+@media screen and (max-width: 900px) {
+  .middle-block {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 35vh;
+    bottom: -120px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .middle-block {
+    position: absolute;
+    height: 20vh;
+    bottom: -75px;
+  }
 }
