@@ -1,5 +1,7 @@
 "use strict";
 
+document.addEventListener("DOMContentLoaded", printUserIp);
+
 let $ = document.querySelector.bind(document);
 
 const ipSearch = $("#ipSearch");
@@ -28,6 +30,49 @@ isp.style.display = "flex";
 isp.style.flexDirection = "column";
 
 const map = $("#map");
+
+async function findUserIp() {
+  const ipUrl = "https://ipinfo.io/json?token=7ca97cb223d14f";
+
+  let response = await fetch(ipUrl, {
+    method: "GET",
+  });
+
+  let data = response.json();
+
+  console.log(data);
+
+  return data;
+}
+
+function printUserIp() {
+  let ipData = findUserIp();
+
+  ipData.then((data) => {
+    console.log(data);
+
+    ipSearch.value = data.ip;
+
+    ipAddress.innerHTML = `
+    <label>IP Address</label>
+    <strong>${data.ip}</strong>`;
+
+    ipLocation.innerHTML = `
+    <label>Location</label>
+    <strong>${data.region}</strong>`;
+    timeZone.innerHTML = `
+    <label>Timezone</label>
+    <strong>${data.timezone}</strong>`;
+
+    isp.innerHTML = `
+    <label>ISP</label>
+    <strong>${data.org}</strong>`;
+
+    map.src = `https://maps.google.com/?q=${data.loc}&output=embed`;
+
+    console.log(data.loc);
+  });
+}
 
 async function getData() {
   const url = `https://ipinfo.io/${ipSearch.value}/?token=7ca97cb223d14f`;
