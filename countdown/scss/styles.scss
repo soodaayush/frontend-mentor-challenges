@@ -37,6 +37,10 @@ img {
   display: block;
 }
 
+input {
+  outline: none;
+}
+
 .container {
   flex-direction: column;
   height: 100vh;
@@ -58,6 +62,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 30px;
     color: white;
     text-transform: uppercase;
     letter-spacing: 5px;
