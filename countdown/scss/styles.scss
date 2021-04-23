@@ -38,9 +38,6 @@ img {
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   height: 100vh;
 
@@ -58,9 +55,20 @@ img {
   }
 
   .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     text-transform: uppercase;
     letter-spacing: 5px;
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
   }
 
   .content {

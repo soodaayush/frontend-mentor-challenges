@@ -19,6 +19,16 @@ function countdownTimer() {
 
   let remaining = "It's the new year!";
 
+  if (futureDate < currentDate) {
+    days.innerHTML = "";
+    hours.innerHTML = "";
+    minutes.innerHTML = "";
+    seconds.innerHTML = "";
+    alert("Please enter a date in the future");
+    dateSelect.value = "";
+    return;
+  }
+
   if (difference > 0) {
     const parts = {
       days: Math.floor(difference / (1000 * 60 * 60 * 24)),
@@ -40,15 +50,15 @@ function countdownTimer() {
     `;
 
     hours.innerHTML = `
-    <h1>${parts.hours}</h1>
+      <h1>${parts.hours}</h1>
     `;
 
     minutes.innerHTML = `
-    <h1>${parts.minutes}</h1>
+      <h1>${parts.minutes}</h1>
     `;
 
     seconds.innerHTML = `
-    <h1>${parts.seconds}</h1>
+      <h1>${parts.seconds}</h1>
     `;
   }
 }
