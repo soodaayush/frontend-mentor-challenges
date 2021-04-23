@@ -40,8 +40,6 @@ async function findUserIp() {
 
   let data = response.json();
 
-  console.log(data);
-
   return data;
 }
 
@@ -49,8 +47,6 @@ function printUserIp() {
   let ipData = findUserIp();
 
   ipData.then((data) => {
-    console.log(data);
-
     ipSearch.value = data.ip;
 
     ipAddress.innerHTML = `
@@ -69,8 +65,6 @@ function printUserIp() {
     <strong>${data.org}</strong>`;
 
     map.src = `https://maps.google.com/?q=${data.loc}&output=embed`;
-
-    console.log(data.loc);
   });
 }
 
