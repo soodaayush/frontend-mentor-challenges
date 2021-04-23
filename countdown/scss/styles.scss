@@ -44,6 +44,19 @@ img {
   flex-direction: column;
   height: 100vh;
 
+  .header {
+    width: 100%;
+
+    .content {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 80%;
+      margin: auto;
+      color: white;
+    }
+  }
+
   .text {
     color: white;
     text-transform: uppercase;
@@ -52,7 +65,6 @@ img {
 
   .content {
     display: flex;
-    gap: 40px;
 
     .box {
       position: relative;
@@ -152,5 +164,22 @@ img {
     align-items: center;
     gap: 40px;
     margin-top: 150px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .content,
+  .values {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .content,
+  .values {
+    display: flex;
+    gap: 40px;
   }
 }
