@@ -33,6 +33,8 @@ dateSelect.addEventListener("change", () => {
   }
 
   storeInLocalStorage(difference, currentDate);
+
+  window.location.reload();
 });
 
 function initialize() {
@@ -60,9 +62,9 @@ function countdown() {
 
   let times = {
     days: Math.floor(timeSeconds / (24 * 3600)),
-    hours: Math.floor(timeSeconds / 3600),
-    minutes: Math.floor(timeSeconds / 60),
-    timeSeconds: timeSeconds,
+    hours: Math.floor((timeSeconds % (3600 * 24)) / 3600) + 4,
+    minutes: Math.floor((timeSeconds % 3600) / 60),
+    seconds: Math.floor(timeSeconds % 60),
   };
 
   days.innerHTML = `
@@ -78,10 +80,10 @@ function countdown() {
 `;
 
   seconds.innerHTML = `
-  <h1>${times.timeSeconds}</h1>
+  <h1>${times.seconds}</h1>
 `;
 
-  console.log(times.timeSeconds);
+  console.log(times.seconds);
 }
 
 setInterval(countdown, 1000);
