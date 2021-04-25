@@ -48,8 +48,6 @@ function storeInLocalStorage(difference, currentDate) {
 }
 
 function countdown() {
-  console.log(targetDate);
-
   let currentDate = moment().format();
 
   let date1 = moment(currentDate);
@@ -83,7 +81,14 @@ function countdown() {
   <h1>${times.seconds}</h1>
 `;
 
-  console.log(times.seconds);
+  if (
+    days.innerHTML === "0" &&
+    hours.innerHTML === "0" &&
+    minutes.innerHTML === "0" &&
+    seconds.innerHTML === "0"
+  ) {
+    initialize();
+  }
 }
 
 setInterval(countdown, 1000);
@@ -103,14 +108,3 @@ function checkLocalStorage() {
 
   targetDate = moment(currentDate).add(difference, "s").format();
 }
-
-//on load check if local storage is already set with date and diff
-//if it is set then
-//take the current date + diff to calculate target date
-//thats your target for ticker countdown
-
-//if it is NOT set
-//let user select the date
-//once the date is selected, save it in local storage
-//get it from local storage
-//thats your target for ticker countdown
