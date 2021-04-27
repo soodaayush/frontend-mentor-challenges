@@ -39,6 +39,10 @@ select {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
+select {
+  cursor: pointer;
+}
+
 .container {
   .header {
     background-color: white;
@@ -110,84 +114,33 @@ select {
     margin-top: 50px;
     padding: 40px 0;
 
-    .content {
+    .row-content {
+      width: 80%;
+      margin: auto;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row wrap;
       gap: 40px;
 
       .row {
         display: flex;
-        gap: 20px;
 
         .country {
-          height: 300px;
+          height: 320px;
           width: 300px;
           border-radius: 10px;
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-          border-radius: 5px;
+          flex: 1;
 
-          .germany {
-            height: 50%;
-            background-image: url(../images/germany.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-          }
+          .flag {
+            height: 60%;
+            width: 100%;
 
-          .usa {
-            height: 50%;
-            background-image: url(../images/usa.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-          }
-
-          .brazil {
-            height: 50%;
-            background-image: url(../images/brazil.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-          }
-
-          .iceland {
-            height: 50%;
-            background-image: url(../images/iceland.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-          }
-
-          .afghan {
-            height: 50%;
-            background-image: url(../images/afghanistan.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-          }
-
-          .aland {
-            height: 50%;
-            background-image: url(../images/aland.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-          }
-
-          .albania {
-            height: 50%;
-            background-image: url(../images/albania.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-          }
-
-          .algeria {
-            height: 50%;
-            background-image: url(../images/algeria.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+            img {
+              height: 100%;
+              width: 100%;
+            }
           }
 
           .info {
