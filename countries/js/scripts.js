@@ -46,6 +46,7 @@ function setAmbiance() {
     document.body.classList.remove("bg-light");
     document.body.classList.add("bg-dark");
 
+    lightModeIcon.src = "images/moon-dark.svg";
     searchImage.src = "images/search-dark.svg";
     lightMode.textContent = "Light Mode";
   } else {
@@ -54,6 +55,7 @@ function setAmbiance() {
     document.body.classList.remove("bg-dark");
     document.body.classList.add("bg-light");
 
+    lightModeIcon.src = "images/moon-light.svg";
     searchImage.src = "images/search-light.svg";
     lightMode.textContent = "Dark Mode";
   }
