@@ -4,12 +4,26 @@ let $ = document.querySelector.bind(document);
 
 document.addEventListener("DOMContentLoaded", initialize);
 
+const lightMode = $("#lightMode");
+
+lightMode.addEventListener("click", lightMode_Click);
+
+const lightModeIcon = $("#lightModeIcon");
+
+const searchImage = $("#searchImage");
+
 const rows = $(".rows");
 const rowContent = $(".row-content");
 
 const numberFormat = new Intl.NumberFormat();
 
+let systemTheme =
+  localStorage.getItem("systemTheme") === null
+    ? "dark"
+    : localStorage.getItem("systemTheme");
+
 function initialize() {
+  setAmbiance();
   loadCountries();
 }
 
@@ -25,6 +39,33 @@ async function getData() {
   return data;
 }
 
+function setAmbiance() {
+  if (systemTheme === "dark") {
+    lightModeIcon.classList.remove("moon-dark");
+    lightModeIcon.classList.add("moon-light");
+    document.body.classList.remove("bg-light");
+    document.body.classList.add("bg-dark");
+
+    searchImage.src = "images/search-dark.svg";
+    lightMode.textContent = "Light Mode";
+  } else {
+    lightModeIcon.classList.remove("moon-light");
+    lightModeIcon.classList.add("moon-dark");
+    document.body.classList.remove("bg-dark");
+    document.body.classList.add("bg-light");
+
+    searchImage.src = "images/search-light.svg";
+    lightMode.textContent = "Dark Mode";
+  }
+
+  localStorage.setItem("systemTheme", systemTheme);
+}
+
+function lightMode_Click() {
+  systemTheme = systemTheme === "dark" ? "light" : "dark";
+  setAmbiance();
+}
+
 function loadCountries() {
   let countryData = getData();
 
@@ -36,26 +77,6 @@ function loadCountries() {
       row.className = "row";
       row.style.display = "flex";
       row.style.gap = "40px";
-
-      //   rowContent.style.border = "1px solid red";
-
-      //   let countryBox = document.createElement("div");
-      //   countryBox.className = "country";
-
-      //   let flag = document.createElement("img");
-      //   flag.style.height = "50%";
-      //   flag.style.width = "100%";
-      //   flag.src = `${country.flag}`;
-
-      //   let info = document.createElement("div");
-      //   info.className = "info";
-
-      //   info.innerHTML = `
-      //   <h4>${country.name}</h4>
-      //   <p>Population: ${numberFormat.format(country.population)}</p>
-      //   <p>Region: ${country.region}</p>
-      //   <p>Capital: ${country.capital}</p>
-      // `;
 
       row.innerHTML = `
         <div class="country">

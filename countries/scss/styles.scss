@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+@import "backgrounds";
 
 *,
 *::after,
@@ -29,6 +30,10 @@ img {
   display: block;
 }
 
+#lightMode {
+  cursor: pointer;
+}
+
 input,
 select {
   font-family: "Nunito Sans", sans-serif;
@@ -45,7 +50,6 @@ select {
 
 .container {
   .header {
-    background-color: white;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
     .content {
@@ -115,13 +119,12 @@ select {
     padding: 40px 0;
 
     .row-content {
-      width: 80%;
       margin: auto;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-flow: row wrap;
-      gap: 40px;
+      gap: 60px;
 
       .row {
         display: flex;
@@ -146,7 +149,6 @@ select {
           .info {
             padding-left: 20px;
             height: 145px;
-            background-color: white;
 
             h4 {
               margin-top: 10px;
@@ -172,6 +174,12 @@ select {
     margin: auto;
     height: 100%;
   }
+
+  .row-content {
+    display: flex;
+    width: 80%;
+    margin: auto;
+  }
 }
 
 @media (min-width: 2000px) {
@@ -181,21 +189,19 @@ select {
     margin: auto;
     height: 100%;
   }
+
+  .row-content {
+    display: flex;
+    width: 50%;
+    margin: auto;
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .search {
     .content {
       display: flex;
       flex-direction: column;
     }
-  }
-
-  .row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
   }
 }

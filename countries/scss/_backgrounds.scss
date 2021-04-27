@@ -1,0 +1,44 @@
+.bg-light {
+  background-color: hsl(0, 0%, 98%);
+
+  .country {
+    .info {
+      background-color: hsl(0, 0%, 98%);
+      color: black;
+    }
+  }
+}
+
+.bg-dark {
+  background-color: hsl(207, 26%, 17%);
+
+  .header {
+    background-color: hsl(209, 23%, 22%);
+    color: white;
+
+    img {
+      color: white;
+    }
+  }
+
+  input,
+  select {
+    background-color: hsl(209, 23%, 22%);
+    color: white;
+  }
+
+  input::placeholder {
+    color: white;
+  }
+
+  img {
+    color: white;
+  }
+
+  .country {
+    .info {
+      background-color: hsl(207, 26%, 17%);
+      color: white;
+    }
+  }
+}
