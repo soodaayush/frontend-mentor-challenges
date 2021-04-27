@@ -10,7 +10,17 @@ lightMode.addEventListener("click", lightMode_Click);
 
 const lightModeIcon = $("#lightModeIcon");
 
-const searchImage = $("#searchImage");
+const searchBox = $("#searchBox");
+console.log(searchBox);
+
+searchBox.addEventListener("Keyup", function (event) {
+  if (event.keyCode === 13) {
+    console.log("e");
+    searchCountry();
+  }
+});
+
+const searchIcon = $("#searchIcon");
 
 const rows = $(".rows");
 const rowContent = $(".row-content");
@@ -47,7 +57,7 @@ function setAmbiance() {
     document.body.classList.add("bg-dark");
 
     lightModeIcon.src = "images/moon-dark.svg";
-    searchImage.src = "images/search-dark.svg";
+    searchIcon.src = "images/search-dark.svg";
     lightMode.textContent = "Light Mode";
   } else {
     lightModeIcon.classList.remove("moon-light");
@@ -56,7 +66,7 @@ function setAmbiance() {
     document.body.classList.add("bg-light");
 
     lightModeIcon.src = "images/moon-light.svg";
-    searchImage.src = "images/search-light.svg";
+    searchIcon.src = "images/search-light.svg";
     lightMode.textContent = "Dark Mode";
   }
 
@@ -98,4 +108,9 @@ function loadCountries() {
       rowContent.appendChild(row);
     }
   });
+}
+
+function searchCountry() {
+  console.log("e");
+  loadCountries(searchBox.value);
 }
