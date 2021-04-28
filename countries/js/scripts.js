@@ -14,6 +14,12 @@ const search = $("#search");
 
 const searchIcon = $("#searchIcon");
 
+const filter = $("#filter");
+
+filter.addEventListener("change", function () {
+  filterByRegion();
+});
+
 let rowContent = $(".row-content");
 
 const numberFormat = new Intl.NumberFormat();
@@ -48,6 +54,18 @@ async function getData() {
 
 async function getSpecificCountry(country) {
   const url = `https://restcountries.eu/rest/v2/name/${country}`;
+
+  let response = await fetch(url, {
+    method: "GET",
+  });
+
+  let data = response.json();
+
+  return data;
+}
+
+async function getSpecificRegion(continent) {
+  const url = `https://restcountries.eu/rest/v2/region/${continent}`;
 
   let response = await fetch(url, {
     method: "GET",
@@ -100,7 +118,7 @@ function loadCountries() {
       row.style.gap = "40px";
 
       row.innerHTML = `
-        <div class="country">
+        <a href="info.html?country=${country.name}" class="country">
             <div style="background-image:url(${
               country.flag
             }); background-size: cover; background-repeat: no-repeat;" class="flag">
@@ -111,7 +129,7 @@ function loadCountries() {
                <p>Region: ${country.region}</p>
                <p>Capital: ${country.capital}</p>
             </div>
-        </div>        
+        </a>        
       `;
 
       rowContent.appendChild(row);
@@ -119,7 +137,7 @@ function loadCountries() {
   });
 }
 
-function loadData(countrySearch) {
+function loadSearchData(countrySearch) {
   countrySearch = countrySearch.toLowerCase();
 
   let countryData = getSpecificCountry(countrySearch);
@@ -139,7 +157,7 @@ function loadData(countrySearch) {
         row.style.gap = "40px";
 
         row.innerHTML = `
-      <div class="country">
+      <a class="country">
           <div style="background-image:url(${
             country.flag
           }); background-size: cover; background-repeat: no-repeat;" class="flag">
@@ -150,7 +168,7 @@ function loadData(countrySearch) {
              <p>Region: ${country.region}</p>
              <p>Capital: ${country.capital}</p>
           </div>
-      </div>        
+      </a>        
     `;
 
         rowContent.appendChild(row);
@@ -170,5 +188,42 @@ function searchCountry() {
   }
 
   clearCountries();
-  loadData(search.value);
+  loadSearchData(search.value);
+}
+
+function loadByRegion(continent) {
+  let countryData = getSpecificRegion(continent);
+
+  countryData.then((data) => {
+    for (let i = 0; i < data.length; i++) {
+      let country = data[i];
+
+      let row = document.createElement("div");
+      row.className = "row";
+      row.style.display = "flex";
+      row.style.gap = "40px";
+
+      row.innerHTML = `
+      <a class="country">
+          <div style="background-image:url(${
+            country.flag
+          }); background-size: cover; background-repeat: no-repeat;" class="flag">
+          </div>
+          <div class="info">
+             <h4>${country.name}</h4>
+             <p>Population: ${numberFormat.format(country.population)}</p>
+             <p>Region: ${country.region}</p>
+             <p>Capital: ${country.capital}</p>
+          </div>
+      </a>        
+    `;
+
+      rowContent.appendChild(row);
+    }
+  });
+}
+
+function filterByRegion() {
+  clearCountries();
+  loadByRegion(filter.value);
 }

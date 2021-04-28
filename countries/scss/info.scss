@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+@import "backgrounds";
+@import "header";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  font-size: 16px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+.content {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+}
+
+.container {
+  height: 100vh;
+
+  .back {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  a {
+    color: white;
+    background-color: hsl(209, 23%, 22%);
+    padding: 5px 10px;
+  }
+
+  .info {
+    display: flex;
+    height: 80vh;
+
+    #flag {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      flex: 1;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .country-info {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex: 1;
+      padding: 0 50px;
+
+      .cols {
+        display: flex;
+        gap: 100px;
+
+        p {
+          margin: 0;
+          font-weight: 600;
+          font-size: 16px;
+        }
+
+        #col-1,
+        #col-2 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

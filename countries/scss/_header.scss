@@ -1,0 +1,26 @@
+.header {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  .content {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .dark-mode {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: 20px;
+        padding-right: 10px;
+      }
+
+      label {
+        font-weight: 800;
+      }
+    }
+  }
+}
