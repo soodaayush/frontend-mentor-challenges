@@ -10,20 +10,11 @@ lightMode.addEventListener("click", lightMode_Click);
 
 const lightModeIcon = $("#lightModeIcon");
 
-const searchBox = $("#searchBox");
-console.log(searchBox);
-
-searchBox.addEventListener("Keyup", function (event) {
-  if (event.keyCode === 13) {
-    console.log("e");
-    searchCountry();
-  }
-});
+const search = $("#search");
 
 const searchIcon = $("#searchIcon");
 
-const rows = $(".rows");
-const rowContent = $(".row-content");
+let rowContent = $(".row-content");
 
 const numberFormat = new Intl.NumberFormat();
 
@@ -37,8 +28,26 @@ function initialize() {
   loadCountries();
 }
 
+search.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    searchCountry();
+  }
+});
+
 async function getData() {
   const url = "https://restcountries.eu/rest/v2/all";
+
+  let response = await fetch(url, {
+    method: "GET",
+  });
+
+  let data = response.json();
+
+  return data;
+}
+
+async function getSpecificCountry(country) {
+  const url = `https://restcountries.eu/rest/v2/name/${country}`;
 
   let response = await fetch(url, {
     method: "GET",
@@ -110,7 +119,56 @@ function loadCountries() {
   });
 }
 
+function loadData(countrySearch) {
+  countrySearch = countrySearch.toLowerCase();
+
+  let countryData = getSpecificCountry(countrySearch);
+
+  countryData.then((data) => {
+    for (let i = 0; i < data.length; i++) {
+      let country = data[i];
+
+      if (
+        country.name.toLowerCase().includes(countrySearch) ||
+        country.region.includes(countrySearch) ||
+        country.capital.includes(countrySearch)
+      ) {
+        let row = document.createElement("div");
+        row.className = "row";
+        row.style.display = "flex";
+        row.style.gap = "40px";
+
+        row.innerHTML = `
+      <div class="country">
+          <div style="background-image:url(${
+            country.flag
+          }); background-size: cover; background-repeat: no-repeat;" class="flag">
+          </div>
+          <div class="info">
+             <h4>${country.name}</h4>
+             <p>Population: ${numberFormat.format(country.population)}</p>
+             <p>Region: ${country.region}</p>
+             <p>Capital: ${country.capital}</p>
+          </div>
+      </div>        
+    `;
+
+        rowContent.appendChild(row);
+      }
+    }
+  });
+}
+
+function clearCountries() {
+  rowContent.innerHTML = "";
+}
+
 function searchCountry() {
-  console.log("e");
-  loadCountries(searchBox.value);
+  if (search.value === "") {
+    loadCountries();
+    return;
+  }
+
+  clearCountries();
+  loadData(search.value);
 }
