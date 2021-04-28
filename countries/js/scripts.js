@@ -157,7 +157,7 @@ function loadSearchData(countrySearch) {
         row.style.gap = "40px";
 
         row.innerHTML = `
-      <a class="country">
+      <a href="info.html?country=${country.name}" class="country">
           <div style="background-image:url(${
             country.flag
           }); background-size: cover; background-repeat: no-repeat;" class="flag">
@@ -204,7 +204,7 @@ function loadByRegion(continent) {
       row.style.gap = "40px";
 
       row.innerHTML = `
-      <a class="country">
+      <a href="info.html?country=${country.name}" class="country">
           <div style="background-image:url(${
             country.flag
           }); background-size: cover; background-repeat: no-repeat;" class="flag">
