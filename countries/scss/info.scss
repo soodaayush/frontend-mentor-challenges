@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
 @import "backgrounds";
 @import "header";
+@import "scrollbar";
 
 *,
 *::after,
@@ -75,21 +76,10 @@ img {
       padding: 0 50px;
 
       .cols {
-        display: flex;
-        gap: 100px;
-
         p {
           margin: 0;
           font-weight: 600;
           font-size: 18px;
-        }
-
-        #col-1,
-        #col-2 {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
         }
       }
     }

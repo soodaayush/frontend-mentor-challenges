@@ -12,7 +12,6 @@ function initialize() {
 const flag = $("#flag");
 
 const col1 = $("#col-1");
-const col2 = $("#col-2");
 
 const numberFormat = new Intl.NumberFormat();
 
@@ -54,6 +53,8 @@ function loadCountryData() {
   countryData.then((data) => {
     let country = data;
 
+    console.log(data);
+
     let flagImage = document.createElement("img");
     flagImage.src = `${country.flag}`;
     flagImage.style.width = "100%";
@@ -67,12 +68,8 @@ function loadCountryData() {
         <p>Region: ${country.region}</p>
         <p>Sub Region: ${country.subregion}</p>
         <p>Capital: ${country.capital}</p>
-    `;
-
-    col2.innerHTML = `
         <p>Top Level Domain: ${country.topLevelDomain}</p>
-        <p>Currencies: ${country.currencies.name}</p>
-        <p>Languages: ${country.languages.name}</p>
+        <p>Calling Code: +${country.callingCodes}</p>
     `;
   });
 }
