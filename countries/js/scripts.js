@@ -118,7 +118,7 @@ function loadCountries() {
       row.style.gap = "40px";
 
       row.innerHTML = `
-        <a href="info.html?country=${country.name}" class="country">
+        <a href="info.html?code=${country.alpha3Code}" class="country">
             <div style="background-image:url(${
               country.flag
             }); background-size: cover; background-repeat: no-repeat;" class="flag">
@@ -157,7 +157,7 @@ function loadSearchData(countrySearch) {
         row.style.gap = "40px";
 
         row.innerHTML = `
-      <a href="info.html?country=${country.name}" class="country">
+      <a href="info.html?code=${country.alpha3Code}" class="country">
           <div style="background-image:url(${
             country.flag
           }); background-size: cover; background-repeat: no-repeat;" class="flag">
@@ -204,7 +204,7 @@ function loadByRegion(continent) {
       row.style.gap = "40px";
 
       row.innerHTML = `
-      <a href="info.html?country=${country.name}" class="country">
+      <a href="info.html?code=${country.alpha3Code}" class="country">
           <div style="background-image:url(${
             country.flag
           }); background-size: cover; background-repeat: no-repeat;" class="flag">
@@ -225,5 +225,11 @@ function loadByRegion(continent) {
 
 function filterByRegion() {
   clearCountries();
+
+  if (filter.value === "All") {
+    loadCountries();
+    return;
+  }
+
   loadByRegion(filter.value);
 }

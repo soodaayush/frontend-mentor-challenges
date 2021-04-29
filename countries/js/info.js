@@ -5,10 +5,6 @@ let $ = document.querySelector.bind(document);
 document.addEventListener("DOMContentLoaded", initialize);
 
 function initialize() {
-  console.log("DOM loaded");
-}
-
-function initialize() {
   setAmbiance();
   loadCountryData();
 }
@@ -27,17 +23,15 @@ let systemTheme =
 
 async function getCountryData() {
   const urlParams = new URLSearchParams(window.location.search);
-  const country = urlParams.get("country");
+  const country = urlParams.get("code");
 
-  const url = `https://restcountries.eu/rest/v2/name/${country}`;
+  const url = `https://restcountries.eu/rest/v2/alpha/${country}`;
 
   let response = await fetch(url, {
     method: "GET",
   });
 
   let data = response.json();
-
-  console.log(data);
 
   return data;
 }
@@ -58,9 +52,7 @@ function loadCountryData() {
   let countryData = getCountryData();
 
   countryData.then((data) => {
-    let country = data[0];
-
-    console.log(country.flag);
+    let country = data;
 
     let flagImage = document.createElement("img");
     flagImage.src = `${country.flag}`;
