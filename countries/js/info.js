@@ -9,6 +9,8 @@ function initialize() {
   loadCountryData();
 }
 
+const back = $("#back");
+
 const flag = $("#flag");
 
 const col1 = $("#col-1");
@@ -39,9 +41,13 @@ function setAmbiance() {
   if (systemTheme === "dark") {
     document.body.classList.remove("bg-light");
     document.body.classList.add("bg-dark");
+
+    back.style.backgroundColor = "hsl(209, 23%, 22%)";
   } else {
     document.body.classList.remove("bg-dark");
     document.body.classList.add("bg-light");
+
+    back.style.backgroundColor = "#ccc";
   }
 
   localStorage.setItem("systemTheme", systemTheme);

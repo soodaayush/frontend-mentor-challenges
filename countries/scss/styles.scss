@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
 @import "backgrounds";
 @import "header";
-@import "scrollbar";
 
 *,
 *::after,
@@ -159,6 +158,13 @@ select {
 }
 
 @media (min-width: 2000px) {
+  .header {
+    .content {
+      width: 50%;
+      margin: auto;
+    }
+  }
+
   .content {
     display: flex;
     width: 50%;
