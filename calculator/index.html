@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="robots" content="index,follow" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body class="bg-grey">
+    <div class="container">
+      <div class="calculator">
+        <div class="theme">
+          <div class="title">
+            <h3>calc</h3>
+          </div>
+          <div class="color">
+            <label class="theme-title">Theme</label>
+            <div class="switch">
+              <div class="numbers">
+                <label>1</label>
+                <label>2</label>
+                <label>3</label>
+              </div>
+              <div class="button">
+                <button id="themeSwitch">
+                  <div class="circle"></div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="answer-box">
+          <input class="box" type="text" disabled />
+        </div>
+        <div class="number-board">
+          <div class="row">
+            <button id="seven" class="number">7</button>
+            <button id="eight" class="number">8</button>
+            <button id="nine" class="number">9</button>
+            <button id="delete" class="word">DEL</button>
+          </div>
+          <div class="row">
+            <button id="four" class="number">4</button>
+            <button id="five" class="number">5</button>
+            <button id="six" class="number">6</button>
+            <button id="add" class="operation">+</button>
+          </div>
+          <div class="row">
+            <button id="one" class="number">1</button>
+            <button id="two" class="number">2</button>
+            <button id="three" class="number">3</button>
+            <button id="subtract" class="operation">-</button>
+          </div>
+          <div class="row">
+            <button id="dot" class="decimal">.</button>
+            <button id="zero" class="number">0</button>
+            <button id="divide" class="operation">/</button>
+            <button id="multiply" class="operation">x</button>
+          </div>
+          <div class="evaluate">
+            <button id="reset" class="reset">RESET</button>
+            <button id="eval" class="equal">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
