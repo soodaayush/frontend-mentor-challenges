@@ -1,5 +1,11 @@
 "use strict";
 
+document.addEventListener("DOMContentLoaded", initialize);
+
+function initialize() {
+  setAmbiance();
+}
+
 let $ = document.querySelector.bind(document);
 
 let selectedOperation;
@@ -8,23 +14,30 @@ const numberFormatter = Intl.NumberFormat();
 
 const themeSwitch = $("#themeSwitch");
 
-themeSwitch.addEventListener("click", switchTheme);
-
 const input = $(".box");
 
 // Theme
 
-const colors = ["grey", "white", "purple"];
+let theme =
+  localStorage.getItem("systemTheme") === null
+    ? "white"
+    : localStorage.getItem("systemTheme");
 
-function setAmbiance() {}
+function themeSwitch_Click() {
+  theme = theme === "white" ? "grey" : "white";
+  setAmbiance();
+}
 
-function switchTheme() {
-  // Get white
+function setAmbiance() {
+  if (theme === "white") {
+    document.body.classList.remove("bg-grey");
+    document.body.classList.add("bg-white");
+  } else {
+    document.body.classList.remove("bg-white");
+    document.body.classList.add("bg-grey");
+  }
 
-  colors.shift();
-  colors.pop();
-
-  console.log(colors);
+  localStorage.setItem("systemTheme", theme);
 }
 
 // Numbers
@@ -57,6 +70,8 @@ const equal = $("#eval");
 // Event Listeners
 
 // Numbers
+
+themeSwitch.addEventListener("click", themeSwitch_Click);
 
 one.addEventListener("click", function () {
   input.placeholder += "1";
@@ -140,23 +155,31 @@ equal.addEventListener("click", function () {
     input.placeholder = numberFormatter.format(
       Number(getNumbers[0]) + Number(getNumbers[1])
     );
+
+    input.style.textAlign = "right";
   }
 
   if (selectedOperation === "x") {
     input.placeholder = numberFormatter.format(
       Number(getNumbers[0]) * Number(getNumbers[1])
     );
+
+    input.style.textAlign = "right";
   }
 
   if (selectedOperation === "-") {
     input.placeholder = numberFormatter.format(
       Number(getNumbers[0]) - Number(getNumbers[1])
     );
+
+    input.style.textAlign = "right";
   }
 
   if (selectedOperation === "/") {
     input.placeholder = numberFormatter.format(
       Number(getNumbers[0]) / Number(getNumbers[1])
     );
+
+    input.style.textAlign = "right";
   }
 });
