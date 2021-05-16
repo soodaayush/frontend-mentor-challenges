@@ -3,6 +3,7 @@
 document.addEventListener("DOMContentLoaded", initialize);
 
 function initialize() {
+  setThemeFromLocalStorage();
   setAmbiance();
 }
 
@@ -18,26 +19,53 @@ const input = $(".box");
 
 // Theme
 
-let theme =
-  localStorage.getItem("systemTheme") === null
-    ? "white"
-    : localStorage.getItem("systemTheme");
+let colors = ["grey", "white", "purple"];
+let index = 0;
 
 function themeSwitch_Click() {
-  theme = theme === "white" ? "grey" : "white";
-  setAmbiance();
+  index++;
+
+  if (index >= colors.length) {
+    index = 0;
+  }
+
+  setAmbiance(colors[index], index);
+
+  console.log(index);
+  console.log(colors[index]);
 }
 
-function setAmbiance() {
+function setAmbiance(theme, index) {
   if (theme === "white") {
     document.body.classList.remove("bg-grey");
     document.body.classList.add("bg-white");
-  } else {
+  } else if (theme === "purple") {
     document.body.classList.remove("bg-white");
+    document.body.classList.add("bg-purple");
+  } else if (theme === "grey") {
+    document.body.classList.remove("bg-purple");
+    document.body.classList.add("bg-grey");
+  } else {
     document.body.classList.add("bg-grey");
   }
 
-  localStorage.setItem("systemTheme", theme);
+  localStorage.setItem("theme", index);
+}
+
+function setThemeFromLocalStorage() {
+  let theme = localStorage.getItem("theme");
+
+  console.log(theme);
+
+  if (theme === "1") {
+    document.body.classList.add("bg-white");
+  } else if (theme === "2") {
+    document.body.classList.add("bg-purple");
+  } else if (theme === "0") {
+    document.body.classList.add("bg-grey");
+  } else {
+    document.body.classList.add("bg-grey");
+  }
 }
 
 // Numbers

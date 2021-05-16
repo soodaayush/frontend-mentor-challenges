@@ -89,3 +89,50 @@
     }
   }
 }
+
+.bg-purple {
+  background-color: hsl(268, 75%, 9%);
+  color: yellow;
+
+  #themeSwitch {
+    background-color: hsl(268, 71%, 12%);
+
+    .circle {
+      position: absolute;
+      top: 2px;
+      right: 3px;
+      background-color: hsl(176, 100%, 44%);
+    }
+  }
+
+  .answer-box {
+    .box {
+      background-color: hsl(268, 71%, 12%);
+      color: white;
+    }
+  }
+
+  .number-board {
+    background-color: hsl(268, 71%, 12%);
+
+    .number,
+    .operation,
+    .decimal {
+      background-color: hsl(281, 89%, 26%);
+      box-shadow: 0px 1px 4px hsl(285, 91%, 52%);
+      color: yellow;
+    }
+
+    .word {
+      background-color: hsl(268, 47%, 21%);
+      box-shadow: 0px 1px 4px hsl(290, 70%, 36%);
+      color: white;
+    }
+
+    .equal {
+      background-color: hsl(176, 100%, 44%);
+      box-shadow: 0px 1px 4px hsl(177, 92%, 70%);
+      color: black;
+    }
+  }
+}
