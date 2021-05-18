@@ -15,7 +15,7 @@ const numberFormatter = Intl.NumberFormat();
 
 const themeSwitch = $("#themeSwitch");
 
-const input = $(".box");
+const userInput = $("#userInput");
 
 // Theme
 
@@ -68,25 +68,13 @@ function setThemeFromLocalStorage() {
   }
 }
 
-// Numbers
+// Number
 
-const one = $("#one");
-const two = $("#two");
-const three = $("#three");
-const four = $("#four");
-const five = $("#five");
-const six = $("#six");
-const seven = $("#seven");
-const eight = $("#eight");
-const nine = $("#nine");
-const zero = $("#zero");
+const numbers = document.querySelectorAll(".number");
 
-// Operations
+// Operation
 
-const add = $("#add");
-const subtract = $("#subtract");
-const divide = $("#divide");
-const multiply = $("#multiply");
+const operations = document.querySelectorAll(".operation");
 
 // Delete, Decimal, Reset and Equal
 
@@ -97,117 +85,76 @@ const equal = $("#eval");
 
 // Event Listeners
 
-// Numbers
+// Theme
 
 themeSwitch.addEventListener("click", themeSwitch_Click);
 
-one.addEventListener("click", function () {
-  input.placeholder += "1";
-});
+// Numbers
 
-two.addEventListener("click", function () {
-  input.placeholder += "2";
-});
-
-three.addEventListener("click", function () {
-  input.placeholder += "3";
-});
-
-four.addEventListener("click", function () {
-  input.placeholder += "4";
-});
-
-five.addEventListener("click", function () {
-  input.placeholder += "5";
-});
-
-six.addEventListener("click", function () {
-  input.placeholder += "6";
-});
-
-seven.addEventListener("click", function () {
-  input.placeholder += "7";
-});
-
-eight.addEventListener("click", function () {
-  input.placeholder += "8";
-});
-
-nine.addEventListener("click", function () {
-  input.placeholder += "9";
-});
-
-zero.addEventListener("click", function () {
-  input.placeholder += "0";
+numbers.forEach((number) => {
+  number.addEventListener("click", function () {
+    userInput.placeholder += number.textContent;
+  });
 });
 
 // Operations
 
-add.addEventListener("click", function () {
-  input.placeholder += " + ";
-  selectedOperation = add.textContent;
-});
-
-subtract.addEventListener("click", function () {
-  input.placeholder += " - ";
-  selectedOperation = subtract.textContent;
-});
-
-divide.addEventListener("click", function () {
-  input.placeholder += " / ";
-  selectedOperation = divide.textContent;
-});
-
-multiply.addEventListener("click", function () {
-  input.placeholder += " x ";
-  selectedOperation = multiply.textContent;
+operations.forEach((operation) => {
+  operation.addEventListener("click", function () {
+    userInput.placeholder += " " + operation.textContent + " ";
+    selectedOperation = operation.textContent;
+  });
 });
 
 // Delete, Decimal, Reset and Equal
 
-del.addEventListener("click", function () {});
+del.addEventListener("click", function () {
+  let strReverse = userInput.placeholder;
+
+  strReverse = strReverse.split("").reverse().join("");
+
+  let deleteString = strReverse - 1;
+
+  strReverse = strReverse.slice(strReverse - deleteString);
+
+  strReverse = strReverse.split("").reverse().join("");
+
+  userInput.placeholder = strReverse;
+});
 
 decimal.addEventListener("click", function () {
-  input.placeholder += ".";
+  userInput.placeholder += ".";
 });
 
 reset.addEventListener("click", function () {
-  input.placeholder = "";
+  userInput.placeholder = "";
 });
 
 equal.addEventListener("click", function () {
-  let getNumbers = input.placeholder.split(selectedOperation);
+  let getNumbers = userInput.placeholder.split(selectedOperation);
   getNumbers[0], getNumbers[1];
 
   if (selectedOperation === "+") {
-    input.placeholder = numberFormatter.format(
+    userInput.placeholder = numberFormatter.format(
       Number(getNumbers[0]) + Number(getNumbers[1])
     );
-
-    input.style.textAlign = "right";
   }
 
   if (selectedOperation === "x") {
-    input.placeholder = numberFormatter.format(
+    userInput.placeholder = numberFormatter.format(
       Number(getNumbers[0]) * Number(getNumbers[1])
     );
-
-    input.style.textAlign = "right";
   }
 
   if (selectedOperation === "-") {
-    input.placeholder = numberFormatter.format(
+    userInput.placeholder = numberFormatter.format(
       Number(getNumbers[0]) - Number(getNumbers[1])
     );
-
-    input.style.textAlign = "right";
   }
 
   if (selectedOperation === "/") {
-    input.placeholder = numberFormatter.format(
+    userInput.placeholder = numberFormatter.format(
       Number(getNumbers[0]) / Number(getNumbers[1])
     );
-
-    input.style.textAlign = "right";
   }
 });
