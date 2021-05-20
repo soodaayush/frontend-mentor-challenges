@@ -3,7 +3,6 @@
 document.addEventListener("DOMContentLoaded", initialize);
 
 function initialize() {
-  // setThemeFromLocalStorage();
   setAmbiance();
 }
 
@@ -35,10 +34,6 @@ function themeSwitch_Click() {
   }
 
   theme = theme === "grey" ? "white" : "purple";
-  theme = theme === "white" ? "purple" : "grey";
-  theme = theme === "purple" ? "grey" : "white";
-
-  // "purple" ? "grey" : "white";
 
   console.log(theme);
 
@@ -62,26 +57,6 @@ function setAmbiance() {
   }
 
   localStorage.setItem("theme", theme);
-}
-
-function setThemeFromLocalStorage() {
-  let theme = localStorage.getItem("theme");
-
-  if (theme === "1") {
-    document.body.classList.remove("bg-purple");
-    document.body.classList.remove("bg-grey");
-    document.body.classList.add("bg-white");
-  } else if (theme === "2") {
-    document.body.classList.remove("bg-grey");
-    document.body.classList.remove("bg-white");
-    document.body.classList.add("bg-purple");
-  } else if (theme === "0") {
-    document.body.classList.remove("bg-purple");
-    document.body.classList.remove("bg-white");
-    document.body.classList.add("bg-grey");
-  } else {
-    document.body.classList.add("bg-grey");
-  }
 }
 
 // Number
