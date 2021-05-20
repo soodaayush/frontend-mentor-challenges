@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", initialize);
 
 function initialize() {
-  setThemeFromLocalStorage();
+  // setThemeFromLocalStorage();
   setAmbiance();
 }
 
@@ -19,6 +19,11 @@ const userInput = $("#userInput");
 
 // Theme
 
+let theme =
+  localStorage.getItem("theme") === null || undefined
+    ? "grey"
+    : localStorage.getItem("theme");
+
 let colors = ["grey", "white", "purple"];
 let index = 0;
 
@@ -29,17 +34,24 @@ function themeSwitch_Click() {
     index = 0;
   }
 
-  setAmbiance(colors[index], index);
+  theme = theme === "grey" ? "white" : "purple";
+  theme = theme === "white" ? "purple" : "grey";
+  theme = theme === "purple" ? "grey" : "white";
 
-  console.log(index);
-  console.log(colors[index]);
+  // "purple" ? "grey" : "white";
+
+  console.log(theme);
+
+  setAmbiance();
 }
 
-function setAmbiance(theme, index) {
+function setAmbiance() {
   if (theme === "white") {
+    document.body.classList.remove("bg-purple");
     document.body.classList.remove("bg-grey");
     document.body.classList.add("bg-white");
   } else if (theme === "purple") {
+    document.body.classList.remove("bg-grey");
     document.body.classList.remove("bg-white");
     document.body.classList.add("bg-purple");
   } else if (theme === "grey") {
@@ -49,19 +61,23 @@ function setAmbiance(theme, index) {
     document.body.classList.add("bg-grey");
   }
 
-  localStorage.setItem("theme", index);
+  localStorage.setItem("theme", theme);
 }
 
 function setThemeFromLocalStorage() {
   let theme = localStorage.getItem("theme");
 
-  console.log(theme);
-
   if (theme === "1") {
+    document.body.classList.remove("bg-purple");
+    document.body.classList.remove("bg-grey");
     document.body.classList.add("bg-white");
   } else if (theme === "2") {
+    document.body.classList.remove("bg-grey");
+    document.body.classList.remove("bg-white");
     document.body.classList.add("bg-purple");
   } else if (theme === "0") {
+    document.body.classList.remove("bg-purple");
+    document.body.classList.remove("bg-white");
     document.body.classList.add("bg-grey");
   } else {
     document.body.classList.add("bg-grey");
