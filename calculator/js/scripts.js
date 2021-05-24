@@ -1,11 +1,5 @@
 "use strict";
 
-document.addEventListener("DOMContentLoaded", initialize);
-
-function initialize() {
-  setAmbiance();
-}
-
 let $ = document.querySelector.bind(document);
 
 let selectedOperation;
@@ -18,11 +12,6 @@ const userInput = $("#userInput");
 
 // Theme
 
-let theme =
-  localStorage.getItem("theme") === null || undefined
-    ? "grey"
-    : localStorage.getItem("theme");
-
 let colors = ["grey", "white", "purple"];
 let index = 0;
 
@@ -33,30 +22,25 @@ function themeSwitch_Click() {
     index = 0;
   }
 
-  theme = theme === "grey" ? "white" : "purple";
-
-  console.log(theme);
-
-  setAmbiance();
+  setAmbiance(index);
 }
 
-function setAmbiance() {
-  if (theme === "white") {
+function setAmbiance(index) {
+  if (index === 0) {
+    document.body.classList.remove("bg-purple");
+    document.body.classList.remove("bg-white");
+    document.body.classList.add("bg-grey");
+  } else if (index === 1) {
     document.body.classList.remove("bg-purple");
     document.body.classList.remove("bg-grey");
     document.body.classList.add("bg-white");
-  } else if (theme === "purple") {
+  } else if (index === 2) {
     document.body.classList.remove("bg-grey");
     document.body.classList.remove("bg-white");
     document.body.classList.add("bg-purple");
-  } else if (theme === "grey") {
-    document.body.classList.remove("bg-purple");
-    document.body.classList.add("bg-grey");
   } else {
     document.body.classList.add("bg-grey");
   }
-
-  localStorage.setItem("theme", theme);
 }
 
 // Number
