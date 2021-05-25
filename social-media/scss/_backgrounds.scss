@@ -1,0 +1,113 @@
+.bg-dark {
+  background-color: hsl(230, 17%, 14%);
+
+  .header {
+    h1 {
+      color: white;
+    }
+
+    label {
+      color: hsl(228, 34%, 66%);
+    }
+
+    .theme {
+      .switcher {
+        background: linear-gradient(
+          to right,
+          hsl(210, 78%, 56%),
+          hsl(146, 68%, 55%)
+        );
+
+        .circle {
+          background-color: #262a45;
+          right: 30px;
+          top: 3px;
+        }
+      }
+    }
+  }
+
+  .follow-metric {
+    background-color: hsl(228, 28%, 20%);
+
+    .platform {
+      color: hsl(228, 34%, 66%);
+    }
+
+    .info {
+      color: white;
+    }
+  }
+
+  .overview {
+    .likes {
+      background-color: hsl(228, 28%, 20%);
+
+      .info {
+        label {
+          color: hsl(228, 34%, 66%);
+        }
+      }
+
+      .number {
+        color: white;
+      }
+    }
+  }
+}
+
+.bg-light {
+  background-color: hsl(0, 0%, 100%);
+
+  .header {
+    h1 {
+      color: black;
+    }
+
+    label {
+      color: hsl(228, 12%, 44%);
+    }
+
+    .theme {
+      .switcher {
+        background-color: hsl(230, 22%, 74%);
+
+        .circle {
+          background-color: white;
+          right: 3px;
+          top: 3px;
+        }
+      }
+    }
+  }
+
+  .follow-metric {
+    background-color: hsl(227, 47%, 96%);
+
+    .platform {
+      color: hsl(228, 12%, 44%);
+    }
+
+    .info {
+      h1 {
+        color: black;
+      }
+    }
+  }
+
+  .overview {
+    .likes {
+      background-color: hsl(227, 47%, 96%);
+
+      .info {
+        label {
+          color: hsl(228, 12%, 44%);
+        }
+      }
+
+      .number {
+        color: black;
+      }
+    }
+  }
+}
