@@ -81,6 +81,11 @@ p {
               hsl(136, 65%, 51%),
               hsl(192, 70%, 51%)
             );
+            transition: 0.15s ease-in-out;
+
+            &:hover {
+              opacity: 0.5;
+            }
           }
         }
       }
@@ -101,6 +106,14 @@ p {
         flex-direction: column;
         margin-bottom: 250px;
         flex: 1;
+
+        button {
+          transition: 0.15s ease-in-out;
+
+          &:hover {
+            opacity: 0.5;
+          }
+        }
       }
 
       .image {
@@ -229,6 +242,11 @@ p {
           hsl(136, 65%, 51%),
           hsl(192, 70%, 51%)
         );
+        transition: 0.15s ease-in-out;
+
+        &:hover {
+          opacity: 0.5;
+        }
       }
     }
   }
