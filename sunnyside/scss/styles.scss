@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  font-size: 16px;
+  font-family: "Barlow", sans-serif;
+  font-family: "Fraunces", serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
+}
+
+img {
+  display: block;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  border: 5px solid red;
+  height: 100vh;
+
+  .we-are-creatives {
+    border: 5px solid blue;
+    height: 100vh;
+    background-image: url(../images/desktop/image-header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .header {
+      padding: 15px 0;
+      border: 5px solid cyan;
+
+      .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        margin: auto;
+
+        a {
+          color: white;
+        }
+
+        a,
+        button {
+          margin-left: 15px;
+        }
+
+        button {
+          color: black;
+          border-radius: 20px;
+          padding: 10px 15px;
+          background-color: white;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .we-are-creatives-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border: 5px solid purple;
+
+      h1 {
+        color: white;
+        letter-spacing: 6px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .transform-your-brand {
+    display: flex;
+    border: 5px solid blue;
+    height: 50vh;
+
+    .text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      flex: 1;
+
+      h1 {
+        font-weight: bold;
+        margin: 0;
+      }
+
+      p {
+        font-size: 12px;
+        font-family: "Barlow", "sans-serif";
+        margin-left: 50px;
+      }
+
+      a {
+        color: black;
+        border-bottom: 5px solid yellow;
+        margin-right: 160px;
+        font-weight: bold;
+      }
+    }
+
+    .image {
+      flex: 1;
+      background-image: url(../images/desktop/image-transform.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .we-are-creatives-content {
+    height: 75%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .we-are-creatives-content {
+    height: 80%;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .we-are-creatives-content {
+    height: 85%;
+  }
+}
