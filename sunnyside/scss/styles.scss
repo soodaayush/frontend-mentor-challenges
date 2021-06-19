@@ -38,11 +38,9 @@ button {
 }
 
 .container {
-  border: 5px solid red;
   height: 100vh;
 
   .we-are-creatives {
-    border: 5px solid blue;
     height: 100vh;
     background-image: url(../images/desktop/image-header.jpg);
     background-size: cover;
@@ -51,7 +49,6 @@ button {
 
     .header {
       padding: 15px 0;
-      border: 5px solid cyan;
 
       .content {
         display: flex;
@@ -75,6 +72,7 @@ button {
           padding: 10px 15px;
           background-color: white;
           font-weight: bold;
+          font-family: "Fraunces", serif;
         }
       }
     }
@@ -84,7 +82,6 @@ button {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      border: 5px solid purple;
 
       h1 {
         color: white;
@@ -96,32 +93,36 @@ button {
 
   .transform-your-brand {
     display: flex;
-    border: 5px solid blue;
-    height: 50vh;
 
     .text {
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
       flex: 1;
 
-      h1 {
-        font-weight: bold;
-        margin: 0;
-      }
+      .inner-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
 
-      p {
-        font-size: 12px;
-        font-family: "Barlow", "sans-serif";
-        margin-left: 50px;
-      }
+        h1 {
+          font-weight: bold;
+          margin: 0;
+        }
 
-      a {
-        color: black;
-        border-bottom: 5px solid yellow;
-        margin-right: 160px;
-        font-weight: bold;
+        p {
+          font-size: 12px;
+          font-family: "Barlow", "sans-serif";
+        }
+
+        a {
+          color: black;
+          border-bottom: 5px solid hsl(51, 100%, 49%);
+          font-weight: bold;
+          font-family: "Fraunces", "serif";
+          margin: 10px 0;
+        }
       }
     }
 
@@ -133,17 +134,262 @@ button {
       background-size: cover;
     }
   }
-}
 
-@media screen and (max-width: 1440px) {
-  .we-are-creatives-content {
-    height: 75%;
+  .stand-out-to-the-right-audience {
+    display: flex;
+
+    .text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      flex: 1;
+
+      .inner-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+
+        h1 {
+          font-weight: bold;
+          margin: 0;
+        }
+
+        p {
+          font-size: 12px;
+          font-family: "Barlow", "sans-serif";
+        }
+
+        a {
+          color: black;
+          border-bottom: 5px solid hsl(7, 99%, 70%);
+          font-weight: bold;
+          font-family: "Fraunces", "serif";
+          margin: 10px 0;
+        }
+      }
+    }
+
+    .image {
+      flex: 1;
+      background-image: url(../images/desktop/image-stand-out.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .graphic-design-photography {
+    display: flex;
+
+    .graphic-design {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      flex: 1;
+      background-image: url(../images/desktop/image-graphic-design.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+
+      h1,
+      p {
+        color: hsl(167, 40%, 24%);
+      }
+    }
+
+    .photography {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      flex: 1;
+      background-image: url(../images/desktop/image-photography.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+
+      h1,
+      p {
+        color: hsl(198, 62%, 26%);
+      }
+    }
+
+    .text {
+      margin: 20px 0;
+    }
+
+    h1 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 12px;
+      font-family: "Barlow", "sans-serif";
+    }
+  }
+
+  .testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+
+    .title {
+      margin: 20px 0;
+
+      h1 {
+        font-size: 20px;
+      }
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0;
+
+      .testimonial {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin: 0 20px;
+
+        .picture {
+          img {
+            border-radius: 50%;
+            height: 50px;
+          }
+        }
+
+        .sentence {
+          margin: 10px 0;
+
+          p {
+            font-family: "Barlow", "sans-serif";
+            font-size: 12px;
+          }
+        }
+
+        .name {
+          h3 {
+            margin: 0;
+            font-size: 15px;
+          }
+
+          label {
+            font-size: 12px;
+            font-family: "Barlow", "sans-serif";
+          }
+        }
+      }
+    }
+  }
+
+  .pictures {
+    display: flex;
+
+    .image-1 {
+      background-image: url(../images/desktop/image-gallery-milkbottles.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      flex: 1;
+    }
+
+    .image-2 {
+      background-image: url(../images/desktop/image-gallery-orange.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      flex: 1;
+    }
+
+    .image-3 {
+      background-image: url(../images/desktop/image-gallery-cone.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      flex: 1;
+    }
+
+    .image-4 {
+      background-image: url(../images/desktop/image-gallery-sugarcubes.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      flex: 1;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(168, 34%, 41%);
+    padding: 30px 0;
+
+    .links {
+      margin: 15px 0;
+
+      a {
+        margin: 0 10px;
+        color: black;
+      }
+    }
+
+    .social-media {
+      display: flex;
+      padding: 50px 0;
+
+      img {
+        margin: 0 10px;
+      }
+    }
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (max-width: 1400px) {
+  .we-are-creatives-content {
+    height: 75%;
+  }
+
+  .transform-your-brand {
+    height: 60vh;
+  }
+
+  .stand-out-to-the-right-audience {
+    height: 60vh;
+  }
+
+  .graphic-design-photography {
+    height: 55vh;
+  }
+
+  .pictures {
+    height: 40vh;
+  }
+}
+
+@media screen and (min-width: 1500px) {
   .we-are-creatives-content {
     height: 80%;
+  }
+
+  .transform-your-brand {
+    height: 80vh;
+  }
+
+  .stand-out-to-the-right-audience {
+    height: 80vh;
+  }
+
+  .graphic-design-photography {
+    height: 70vh;
+  }
+
+  .pictures {
+    height: 65vh;
   }
 }
 
