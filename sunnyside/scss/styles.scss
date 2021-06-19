@@ -191,6 +191,7 @@ button {
       background-image: url(../images/desktop/image-graphic-design.jpg);
       background-repeat: no-repeat;
       background-size: cover;
+      background-position: center;
       text-align: center;
 
       h1,
@@ -207,6 +208,7 @@ button {
       background-image: url(../images/desktop/image-photography.jpg);
       background-repeat: no-repeat;
       background-size: cover;
+      background-position: center;
       text-align: center;
 
       h1,
@@ -292,32 +294,46 @@ button {
   .pictures {
     display: flex;
 
-    .image-1 {
-      background-image: url(../images/desktop/image-gallery-milkbottles.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
+    .images-1 {
+      display: flex;
       flex: 1;
+
+      .image-1 {
+        background-image: url(../images/desktop/image-gallery-milkbottles.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex: 1;
+        height: 100%;
+      }
+
+      .image-2 {
+        background-image: url(../images/desktop/image-gallery-orange.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex: 1;
+        height: 100%;
+      }
     }
 
-    .image-2 {
-      background-image: url(../images/desktop/image-gallery-orange.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
+    .images-2 {
+      display: flex;
       flex: 1;
-    }
 
-    .image-3 {
-      background-image: url(../images/desktop/image-gallery-cone.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      flex: 1;
-    }
+      .image-3 {
+        background-image: url(../images/desktop/image-gallery-cone.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex: 1;
+        height: 100%;
+      }
 
-    .image-4 {
-      background-image: url(../images/desktop/image-gallery-sugarcubes.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      flex: 1;
+      .image-4 {
+        background-image: url(../images/desktop/image-gallery-sugarcubes.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex: 1;
+        height: 100%;
+      }
     }
   }
 
@@ -349,6 +365,39 @@ button {
   }
 }
 
+@media screen and (max-width: 700px) {
+  .transform-your-brand {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .stand-out-to-the-right-audience {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .graphic-design-photography {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonials {
+    .content {
+      display: flex;
+      flex-direction: column;
+
+      .testimonial {
+        padding: 20px 0;
+      }
+    }
+  }
+
+  .pictures {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   .we-are-creatives-content {
     height: 75%;
@@ -368,6 +417,28 @@ button {
 
   .pictures {
     height: 40vh;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .we-are-creatives-content {
+    height: 75%;
+  }
+
+  .transform-your-brand {
+    height: 60vh;
+  }
+
+  .stand-out-to-the-right-audience {
+    height: 60vh;
+  }
+
+  .graphic-design-photography {
+    height: 60vh;
+  }
+
+  .pictures {
+    height: 60vh;
   }
 }
 
