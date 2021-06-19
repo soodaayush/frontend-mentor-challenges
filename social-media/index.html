@@ -10,16 +10,16 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body class="bg-dark">
     <div class="container">
       <div class="header">
         <div class="text">
           <h1>Social Media Dashboard</h1>
           <label>Total Followers: 23,004</label>
         </div>
-        <div class="dark-mode">
-          <label>Dark Mode</label>
-          <div class="switcher">
+        <div class="theme">
+          <label id="themeMode">Dark Mode</label>
+          <div id="themeSwitch" class="switcher">
             <div class="circle"></div>
           </div>
         </div>
@@ -57,7 +57,6 @@
             </div>
           </div>
         </div>
-
         <div class="follow-metric">
           <div class="gradient"></div>
           <div class="content">
@@ -206,5 +205,6 @@
         </div>
       </div>
     </div>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

@@ -76,6 +76,11 @@ h3 {
         a {
           color: #232d53;
           font-weight: 500;
+          transition: 0.15s ease-in-out;
+
+          &:hover {
+            opacity: 0.5;
+          }
         }
       }
 
@@ -87,6 +92,11 @@ h3 {
           background-color: hsl(12, 88%, 59%);
           color: white;
           box-shadow: #fec7bd 0px 6px 7px;
+          transition: 0.15s ease-in-out;
+
+          &:hover {
+            opacity: 0.5;
+          }
         }
       }
     }
@@ -117,6 +127,11 @@ h3 {
             background-color: hsl(12, 88%, 59%);
             color: white;
             box-shadow: #fec7bd 0px 6px 7px;
+            transition: 0.15s ease-in-out;
+
+            &:hover {
+              opacity: 0.5;
+            }
           }
         }
       }

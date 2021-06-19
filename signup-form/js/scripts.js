@@ -1,3 +1,7 @@
+"use strict";
+
+let $ = document.querySelector.bind(document);
+
 let myHtml = document.querySelector(".html");
 
 myHtml.style.scrollBehavior = "smooth";
@@ -6,11 +10,11 @@ myHtml.style.mozOsxFontSmoothing = "grayscale";
 myHtml.style.fontSize = "16px";
 myHtml.style.lineHeight = "1.6";
 
-let myBody = document.getElementsByTagName('body')[0];;
+let myBody = document.getElementsByTagName("body")[0];
 console.log(myBody);
 myBody.style.margin = "0";
 myBody.style.backgroundColor = "hsl(0, 100%, 74%)";
-myBody.style.backgroundImage = 'url(images/bg-intro-desktop.png)';
+myBody.style.backgroundImage = "url(images/bg-intro-desktop.png)";
 // myBody.css('background-image', 'url(../images/bg-intro-desktop.png)');
 
 let myContainer = document.createElement("div");
@@ -38,7 +42,7 @@ let paragraph = document.createElement("p");
 paragraph.className = "sentence";
 
 paragraph.innerHTML =
-  "See how experienced developers solve problems in real-time. <br /> Wathcing scripted tutorials is great, but understanding how <br /> developers think is invaluable";
+  "See how experienced developers solve problems in real-time. <br /> Watching scripted tutorials is great, but understanding how <br /> developers think is invaluable";
 
 leftBanner.appendChild(paragraph);
 
@@ -85,6 +89,8 @@ input1.setAttribute("placeholder", "First Name");
 
 input1.className = "input";
 
+input1.id = "firstName";
+
 box1.appendChild(input1);
 
 let box2 = document.createElement("div");
@@ -101,6 +107,8 @@ input2.setAttribute("text", "username");
 
 input2.className = "input";
 
+input2.id = "lastName";
+
 box2.appendChild(input2);
 
 let box3 = document.createElement("div");
@@ -115,9 +123,13 @@ input3.setAttribute("email", "username");
 
 input3.className = "input";
 
+input3.id = "email";
+
 box3.appendChild(input3);
 
 input3.setAttribute("placeholder", "Email Address");
+
+input3.type = "email";
 
 let box4 = document.createElement("div");
 
@@ -132,6 +144,10 @@ input4.setAttribute("placeholder", "Password");
 input4.setAttribute("password", "username");
 
 input4.className = "input";
+
+input4.id = "password";
+
+input4.type = "password";
 
 box4.appendChild(input4);
 
@@ -294,3 +310,47 @@ myLink.style.color = "hsl(0, 100%, 74%)";
 myLink.style.fontWeight = "bold";
 myLink.style.cursor = "pointer";
 myLink.style.fontSize = "11px";
+
+const submitBtn = $(".submit-button");
+
+submitBtn.addEventListener("click", validateInputs);
+
+function validateInputs() {
+  if (
+    input1.value === "" ||
+    input2.value === "" ||
+    input3.value === "" ||
+    input4.value === ""
+  ) {
+    alert("At least 1 or more box(es) has not been filled out!");
+  } else {
+    input1.value = "";
+    input2.value = "";
+    input3.value = "";
+    input4.value = "";
+    return;
+  }
+
+  const firstNameRe = /^[a-zA-Z]{2,20}$/;
+
+  if (firstNameRe.test(input1.value)) {
+  } else {
+    alert("Your first name has not followed the format");
+    return;
+  }
+
+  const lastNameRe = /^[a-zA-Z]{2,20}$/;
+
+  if (lastNameRe.test(input2.value)) {
+  } else {
+    alert("Your last name has not followed the format");
+    return;
+  }
+
+  alert("You have successfully filled out the form!");
+
+  input1.value = "";
+  input2.value = "";
+  input3.value = "";
+  input4.value = "";
+}

@@ -68,6 +68,11 @@ h6 {
           a {
             color: #909092;
             font-weight: 600;
+            transition: 0.15s ease-in-out;
+
+            &:hover {
+              color: black;
+            }
           }
 
           button {
@@ -78,8 +83,9 @@ h6 {
             width: 150px;
             border: 2px solid black;
             font-weight: 600;
+            transition: 0.25s ease-in-out;
 
-            &:focus {
+            &:hover {
               background-color: black;
               color: white;
             }
@@ -121,8 +127,9 @@ h6 {
             color: white;
             margin-top: 20px;
             border: 2px solid white;
+            transition: 0.25s ease-in-out;
 
-            &:focus {
+            &:hover {
               background-color: white;
               color: black;
             }
@@ -217,8 +224,9 @@ h6 {
         width: 150px;
         color: white;
         border: 2px solid white;
+        transition: 0.25s ease-in-out;
 
-        &:focus {
+        &:hover {
           background-color: white;
           color: black;
         }
