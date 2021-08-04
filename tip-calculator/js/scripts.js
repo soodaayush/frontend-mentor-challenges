@@ -23,12 +23,6 @@ billInput.addEventListener("keyup", function () {
   } else {
     billInput.style.border = "";
     billInputError.style.display = "none";
-
-    totalPrice.textContent = `$${billInput.value}`;
-  }
-
-  if (billInput.value === "") {
-    totalPrice.textContent = "$0.00";
   }
 });
 
@@ -73,11 +67,15 @@ tipBtn.forEach((element) => {
       return;
     }
 
-    let bill = (billInput.value * tip) / 100;
+    let bill = billInput.value / tip;
 
     let tipTotal = bill / peopleInput.value;
 
-    tipPrice.textContent = `$${tipTotal}`;
+    tipPrice.textContent = `$${tipTotal.toFixed(2)}`;
+
+    let totalTipPerPerson = billInput.value / peopleInput.value;
+
+    totalPrice.textContent = `$${totalTipPerPerson + tipTotal.toFixed(2)}`;
   });
 });
 
@@ -88,9 +86,13 @@ customTip.addEventListener("keyup", function () {
     return;
   }
 
-  let bill = (billInput.value * tip) / 100;
+  let bill = billInput.value / tip;
 
   let tipTotal = bill / peopleInput.value;
 
-  tipPrice.textContent = `$${tipTotal}`;
+  tipPrice.textContent = `$${tipTotal.toFixed(2)}`;
+
+  let totalTipPerPerson = billInput.value / peopleInput.value;
+
+  totalPrice.textContent = `$${totalTipPerPerson + tipTotal.toFixed(2)}`;
 });
