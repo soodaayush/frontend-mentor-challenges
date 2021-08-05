@@ -16,6 +16,11 @@ const totalPrice = $("#totalPrice");
 
 const resetBtn = $("#resetBtn");
 
+const numberFormatter = Intl.NumberFormat("en-US", {
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 2,
+});
+
 billInput.addEventListener("keyup", function () {
   if (billInput.value === "0") {
     billInput.style.border = "1.5px solid red";
@@ -69,13 +74,19 @@ tipBtn.forEach((element) => {
 
     let bill = billInput.value / tip;
 
+    let totalTipPerPerson = bill / 2;
+
+    let billPerPerson = billInput.value / 2;
+
     let tipTotal = bill / peopleInput.value;
 
-    tipPrice.textContent = `$${tipTotal.toFixed(2)}`;
+    tipPrice.textContent = `$${numberFormatter.format(tipTotal)}`;
 
-    let totalTipPerPerson = billInput.value / peopleInput.value;
+    totalPrice.textContent = `$${numberFormatter.format(
+      billPerPerson + totalTipPerPerson
+    )}`;
 
-    totalPrice.textContent = `$${totalTipPerPerson + tipTotal.toFixed(2)}`;
+    console.log(totalTipPerPerson + tipTotal);
   });
 });
 
@@ -88,11 +99,17 @@ customTip.addEventListener("keyup", function () {
 
   let bill = billInput.value / tip;
 
+  let totalTipPerPerson = bill / 2;
+
+  let billPerPerson = billInput.value / 2;
+
   let tipTotal = bill / peopleInput.value;
 
-  tipPrice.textContent = `$${tipTotal.toFixed(2)}`;
+  tipPrice.textContent = `$${numberFormatter.format(tipTotal)}`;
 
-  let totalTipPerPerson = billInput.value / peopleInput.value;
+  totalPrice.textContent = `$${numberFormatter.format(
+    billPerPerson + totalTipPerPerson
+  )}`;
 
-  totalPrice.textContent = `$${totalTipPerPerson + tipTotal.toFixed(2)}`;
+  console.log(totalTipPerPerson + tipTotal);
 });
