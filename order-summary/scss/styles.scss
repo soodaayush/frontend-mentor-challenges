@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: url(../images/pattern-background-desktop.svg), hsl(225, 100%, 94%);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+button {
+  font-family: "Red Hat Display", sans-serif;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+
+    .image {
+      img {
+        border-radius: 10px 10px 0 0;
+      }
+    }
+
+    .text {
+      text-align: center;
+    }
+
+    .plan {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: hsl(225, 100%, 98%);
+
+      div {
+        margin: 0 20px;
+      }
+
+      .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          height: 40px;
+        }
+
+        .text {
+          text-align: left;
+
+          h4 {
+            margin: 0;
+          }
+
+          label {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .change {
+        a {
+          font-size: 13px;
+          text-decoration: underline;
+          color: hsl(245, 75%, 52%);
+        }
+      }
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 20px 0;
+
+      button {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        font-weight: bold;
+      }
+
+      .proceed {
+        background-color: hsl(245, 75%, 52%);
+        color: white;
+        box-shadow: hsl(224, 23%, 55%) 0px 8px 24px;
+      }
+
+      .cancel {
+        background-color: transparent;
+      }
+    }
+  }
+}
