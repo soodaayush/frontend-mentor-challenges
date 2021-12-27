@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  font-size: 16px;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+p {
+  font-size: 13px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(217, 54%, 11%);
+  height: 100vh;
+  color: white;
+
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: hsl(216, 50%, 16%);
+    border-radius: 10px;
+    padding: 20px;
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        border-radius: 10px;
+        height: 40vh;
+      }
+    }
+
+    .description {
+      text-align: left;
+      width: 100%;
+
+      h3 {
+        padding: 0;
+        margin-top: 15px;
+        margin-bottom: 0;
+      }
+
+      p {
+        font-weight: lighter;
+        margin-top: 5px;
+        color: hsl(215, 51%, 70%);
+      }
+    }
+
+    .price-timing {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      p {
+        margin-left: 10px;
+      }
+
+      .price {
+        display: flex;
+        align-items: center;
+        flex: 1;
+
+        img {
+          height: 25px;
+        }
+
+        p {
+          color: hsl(178, 100%, 50%);
+          font-weight: bold;
+        }
+      }
+
+      .timing {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex: 1;
+
+        p {
+          color: hsl(215, 51%, 70%);
+        }
+      }
+    }
+
+    .line {
+      width: 100%;
+      background: hsl(215, 32%, 27%);
+      height: 2px;
+      margin: 10px 0;
+    }
+
+    .creator {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      img {
+        height: 25px;
+        border: 1px solid white;
+        border-radius: 20px;
+      }
+
+      p {
+        margin-left: 10px;
+        color: hsl(215, 51%, 70%);
+
+        strong {
+          color: white;
+        }
+      }
+    }
+  }
+}
