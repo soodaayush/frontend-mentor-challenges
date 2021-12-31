@@ -60,8 +60,6 @@ async function getData() {
 
   let responseJson = await response.json();
 
-  console.log(responseJson[0].timeframes.weekly);
-
   if (localStorage.getItem("filter") === "daily") {
     workTitle.textContent = responseJson[0].title;
     workHours.textContent = responseJson[0].timeframes.daily.current + "hrs";
