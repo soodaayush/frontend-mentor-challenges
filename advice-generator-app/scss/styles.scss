@@ -54,13 +54,31 @@ img {
 
     .advice-body {
       margin-top: 20px;
-      font-size: 25px;
+      font-size: 28px;
       width: 50%;
       text-align: center;
+      color: hsl(193, 38%, 86%);
     }
 
     .advice-footer {
       margin-top: 20px;
+    }
+
+    .new-advice {
+      margin-top: 20px;
+      margin-bottom: -45px;
+
+      button {
+        border-radius: 30px;
+        border: none;
+        background-color: hsl(150, 100%, 66%);
+        padding: 15px;
+        cursor: pointer;
+
+        img {
+          height: 20px;
+        }
+      }
     }
   }
 }

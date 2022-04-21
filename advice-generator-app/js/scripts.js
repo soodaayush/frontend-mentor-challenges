@@ -6,10 +6,9 @@ document.addEventListener("DOMContentLoaded", initialize);
 
 let adviceID = $("#adviceID");
 let adviceBody = $("#adviceBody");
+let newAdviceBtn = $("#newAdviceBtn");
 
 async function initialize() {
-  console.log("DOM loaded");
-
   let url = "https://api.adviceslip.com/advice";
 
   let response = await fetch(url, {
@@ -18,10 +17,12 @@ async function initialize() {
 
   let apiData = response.json();
 
-  console.log(apiData);
-
   apiData.then((data) => {
     adviceID.textContent = `Advice #${data.slip.id}`;
     adviceBody.textContent = `"${data.slip.advice}"`;
   });
 }
+
+newAdviceBtn.addEventListener("click", function () {
+  initialize();
+});
