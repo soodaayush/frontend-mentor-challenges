@@ -158,23 +158,16 @@ select {
 }
 
 @media (min-width: 2000px) {
-  .header {
-    .content {
-      width: 50%;
-      margin: auto;
-    }
-  }
-
   .content {
     display: flex;
-    width: 50%;
+    width: 80%;
     margin: auto;
     height: 100%;
   }
 
   .row-content {
     display: flex;
-    width: 50%;
+    width: 80%;
     margin: auto;
   }
 }
