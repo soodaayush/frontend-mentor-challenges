@@ -71,11 +71,11 @@ function printUserIp() {
 async function getData() {
   const url = `https://ipinfo.io/${ipSearch.value}/?token=7ca97cb223d14f`;
 
-  let reponse = await fetch(url, {
+  let response = await fetch(url, {
     method: "GET",
   });
 
-  let data = reponse.json();
+  let data = response.json();
 
   return data;
 }
@@ -84,8 +84,6 @@ function getIp() {
   let ipData = getData();
 
   ipData.then((data) => {
-    console.log(data);
-
     ipAddress.innerHTML = `
     <label>IP Address</label>
     <strong>${data.ip}</strong>`;
@@ -102,7 +100,5 @@ function getIp() {
     <strong>${data.org}</strong>`;
 
     map.src = `https://maps.google.com/?q=${data.loc}&output=embed`;
-
-    console.log(data.loc);
   });
 }
