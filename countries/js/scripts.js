@@ -41,7 +41,7 @@ search.addEventListener("keyup", function (event) {
 });
 
 async function getData() {
-  const url = "https://restcountries.eu/rest/v2/all";
+  const url = "https://restcountries.com/v3.1/all";
 
   let response = await fetch(url, {
     method: "GET",
@@ -53,7 +53,7 @@ async function getData() {
 }
 
 async function getSpecificCountry(country) {
-  const url = `https://restcountries.eu/rest/v2/name/${country}`;
+  const url = `https://restcountries.com/v3.1/name/${country}`;
 
   let response = await fetch(url, {
     method: "GET",
@@ -65,7 +65,7 @@ async function getSpecificCountry(country) {
 }
 
 async function getSpecificRegion(continent) {
-  const url = `https://restcountries.eu/rest/v2/region/${continent}`;
+  const url = `https://restcountries.com/v3.1/name/${continent}`;
 
   let response = await fetch(url, {
     method: "GET",
@@ -118,13 +118,13 @@ function loadCountries() {
       row.style.gap = "40px";
 
       row.innerHTML = `
-        <a href="info.html?code=${country.alpha3Code}" class="country">
+        <a href="info.html?code=${country.cca3}" class="country">
             <div style="background-image:url(${
-              country.flag
+              country.flags.svg
             }); background-size: cover; background-repeat: no-repeat;" class="flag">
             </div>
             <div class="info">
-               <h4>${country.name}</h4>
+               <h4>${country.name.official}</h4>
                <p>Population: ${numberFormat.format(country.population)}</p>
                <p>Region: ${country.region}</p>
                <p>Capital: ${country.capital}</p>
@@ -147,7 +147,7 @@ function loadSearchData(countrySearch) {
       let country = data[i];
 
       if (
-        country.name.toLowerCase().includes(countrySearch) ||
+        country.name.official.toLowerCase().includes(countrySearch) ||
         country.region.includes(countrySearch) ||
         country.capital.includes(countrySearch)
       ) {
@@ -157,19 +157,19 @@ function loadSearchData(countrySearch) {
         row.style.gap = "40px";
 
         row.innerHTML = `
-      <a href="info.html?code=${country.alpha3Code}" class="country">
-          <div style="background-image:url(${
-            country.flag
-          }); background-size: cover; background-repeat: no-repeat;" class="flag">
-          </div>
-          <div class="info">
-             <h4>${country.name}</h4>
-             <p>Population: ${numberFormat.format(country.population)}</p>
-             <p>Region: ${country.region}</p>
-             <p>Capital: ${country.capital}</p>
-          </div>
-      </a>        
-    `;
+        <a href="info.html?code=${country.alpha3Code}" class="country">
+            <div style="background-image:url(${
+              country.flags.svg
+            }); background-size: cover; background-repeat: no-repeat;" class="flag">
+            </div>
+            <div class="info">
+               <h4>${country.name.official}</h4>
+               <p>Population: ${numberFormat.format(country.population)}</p>
+               <p>Region: ${country.region}</p>
+               <p>Capital: ${country.capital}</p>
+            </div>
+        </a>        
+      `;
 
         rowContent.appendChild(row);
       }
@@ -206,11 +206,11 @@ function loadByRegion(continent) {
       row.innerHTML = `
       <a href="info.html?code=${country.alpha3Code}" class="country">
           <div style="background-image:url(${
-            country.flag
+            country.flags.svg
           }); background-size: cover; background-repeat: no-repeat;" class="flag">
           </div>
           <div class="info">
-             <h4>${country.name}</h4>
+             <h4>${country.name.official}</h4>
              <p>Population: ${numberFormat.format(country.population)}</p>
              <p>Region: ${country.region}</p>
              <p>Capital: ${country.capital}</p>
