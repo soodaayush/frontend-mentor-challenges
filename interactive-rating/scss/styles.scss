@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  font-size: 16px;
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+button {
+  border: none;
+  font-family: "Overpass", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: hsl(216, 12%, 8%);
+  color: #fff;
+
+  .modal {
+    background: #262f38;
+    border-radius: 20px;
+    padding: 25px;
+
+    .modal-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      p {
+        font-size: 12px;
+        margin: 0;
+        color: hsl(216, 12%, 54%);
+      }
+
+      img {
+        border-radius: 20px;
+        background: #262f38;
+        padding: 10px;
+      }
+
+      .submit-modal {
+        margin-bottom: 20px;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+
+        .button {
+          border-radius: 100px;
+          background: #212832;
+          text-align: center;
+          margin: 0 10px;
+          cursor: pointer;
+          color: hsl(216, 12%, 54%);
+          font-weight: bold;
+          transition: 0.15s ease-in-out;
+          padding: 20px;
+
+          &:hover {
+            background: hsl(216, 12%, 54%);
+            color: #fff;
+            transition: 0.15s ease-in-out;
+          }
+
+          &:focus {
+            background: hsl(25, 97%, 53%);
+            color: #fff;
+            transition: 0.15s ease-in-out;
+          }
+        }
+      }
+
+      .submit {
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background: hsl(25, 97%, 53%);
+        color: #fff;
+        transition: 0.15s ease-in-out;
+
+        &:hover {
+          background: #fff;
+          color: hsl(25, 97%, 53%);
+          cursor: pointer;
+          transition: 0.15s ease-in-out;
+        }
+      }
+
+      .submitted-modal {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        label {
+          color: hsl(25, 97%, 53%);
+          margin: 10px 0;
+          background: #243036;
+        }
+
+        h2 {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}
