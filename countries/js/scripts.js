@@ -157,7 +157,7 @@ function loadSearchData(countrySearch) {
         row.style.gap = "40px";
 
         row.innerHTML = `
-        <a href="info.html?code=${country.alpha3Code}" class="country">
+        <a href="info.html?code=${country.cca3}" class="country">
             <div style="background-image:url(${
               country.flags.svg
             }); background-size: cover; background-repeat: no-repeat;" class="flag">
@@ -204,7 +204,7 @@ function loadByRegion(continent) {
       row.style.gap = "40px";
 
       row.innerHTML = `
-      <a href="info.html?code=${country.alpha3Code}" class="country">
+      <a href="info.html?code=${country.cca3}" class="country">
           <div style="background-image:url(${
             country.flags.svg
           }); background-size: cover; background-repeat: no-repeat;" class="flag">
