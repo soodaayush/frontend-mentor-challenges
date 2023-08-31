@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: hsl(0, 0%, 86%);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+p {
+  display: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container .input-error {
+  border: 1px solid hsl(0, 100%, 67%);
+}
+.container .text-error {
+  color: hsl(0, 100%, 67%);
+}
+.container .age-calculator {
+  background-color: white;
+  border-radius: 10px 10px 150px 10px;
+  padding: 50px;
+}
+.container .age-calculator .age-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .age-calculator .age-inputs .date-field {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+.container .age-calculator .age-inputs .date-field input {
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid hsl(0, 0%, 86%);
+  width: 70%;
+  font-weight: bold;
+}
+.container .age-calculator .age-inputs .date-field input::-moz-placeholder {
+  color: hsl(0, 1%, 44%);
+  font-size: 25px;
+  font-weight: bold;
+}
+.container .age-calculator .age-inputs .date-field input::placeholder {
+  color: hsl(0, 1%, 44%);
+  font-size: 25px;
+  font-weight: bold;
+}
+.container .age-calculator .age-inputs .date-field label {
+  width: 100%;
+  font-size: 12px;
+  color: hsl(0, 1%, 44%);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.container .age-calculator .age-inputs .date-field .day-error {
+  display: none;
+}
+.container .age-calculator .age-inputs .date-field .month-error {
+  display: none;
+}
+.container .age-calculator .age-inputs .date-field .year-error {
+  display: none;
+}
+.container .age-calculator .age-inputs .date-field .error-message {
+  font-style: italic;
+  margin-top: 10px;
+  color: hsl(0, 100%, 67%);
+  font-size: 12px;
+}
+.container .age-calculator .submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+.container .age-calculator .submit-button .line {
+  border: 1px solid hsl(0, 0%, 94%);
+  width: 100%;
+}
+.container .age-calculator .submit-button .button button {
+  border: none;
+  background: hsl(259, 100%, 65%);
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.container .age-calculator .submit-button .button button img {
+  padding: 10px;
+  height: 50px;
+}
+.container .age-calculator .calculated-results {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+}
+.container .age-calculator .calculated-results .calculated-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  font-style: italic;
+  font-weight: 800;
+}
+.container .age-calculator .calculated-results .calculated-field .amount {
+  color: hsl(259, 100%, 65%);
+}
