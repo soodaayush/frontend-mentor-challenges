@@ -8,14 +8,17 @@ submitBtn.addEventListener("click", submit);
 let dayLabel = $("#day-label");
 let dayInput = $("#day-input");
 let dayError = $(".day-error");
+let dayAmount = $("#day-amount");
 
 let monthLabel = $("#month-label");
 let monthInput = $("#month-input");
 let monthError = $(".month-error");
+let monthAmount = $("#month-amount");
 
 let yearLabel = $("#year-label");
 let yearInput = $("#year-input");
 let yearError = $(".year-error");
+let yearAmount = $("#year-amount");
 
 let date = new Date();
 
@@ -64,9 +67,27 @@ function submit() {
     yearError.style.display = "inline-block";
   }
 
-  inputtedDate = new Date(
+  console.log(yearInput.value);
+
+  let inputtedDate = new Date(
     `${monthInput.value}/${dayInput.value}/${yearInput.value}`
   );
+
+  console.log(date)
+
+  var diff = Math.floor(date.getTime() - inputtedDate.getTime());
+  var secs = Math.floor(diff / 1000);
+  var mins = Math.floor(secs / 60);
+  var hours = Math.floor(mins / 60);
+  var days = Math.floor(hours / 24);
+  var months = Math.floor(days / 31);
+  var years = Math.floor(months / 12);
+  months = Math.floor(months % 12);
+  days = Math.floor(days % 31);
+
+  dayAmount.innerText = `${days}`;
+  monthAmount.innerText = `${months}`;
+  yearAmount.innerText = `${years}`;
 
   console.log(inputtedDate);
 }
