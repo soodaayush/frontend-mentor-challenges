@@ -1,6 +1,6 @@
 # Frontend Mentor Challenges
 
-![challenges](https://github.com/user-attachments/assets/f74b38be-5721-4787-abd7-108e99b1e7d8)
+![frontend-mentor-challenges](https://github.com/user-attachments/assets/e2ca17f0-49f7-4e69-856e-55991a2eaff2)
 
 ## Inspiration
 
